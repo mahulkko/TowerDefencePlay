@@ -26,7 +26,7 @@ object index extends BaseScalaTemplate[play.api.templates.HtmlFormat.Appendable,
     def apply():play.api.templates.HtmlFormat.Appendable = {
         _display_ {
 
-Seq[Any](format.raw/*1.1*/("""<html ng-app="towerdefence">
+Seq[Any](format.raw/*1.1*/("""<html ng-app="towerdefenceApp">
   <head>
     <meta charset="utf-8">
     <title>Angular.js V2</title>
@@ -39,6 +39,7 @@ Seq[Any](format.raw/*1.1*/("""<html ng-app="towerdefence">
     
     <script type='text/javascript' src="/assets/javascript/app.js"></script>
     <script type='text/javascript' src="/assets/javascript/controllers.js"></script>
+    <script type='text/javascript' src="/assets/javascript/gamecontextfactory.js"></script>
     
   </head>
   <body>
@@ -56,9 +57,9 @@ Seq[Any](format.raw/*1.1*/("""<html ng-app="towerdefence">
 }
                 /*
                     -- GENERATED --
-                    DATE: Thu Dec 11 13:34:40 CET 2014
+                    DATE: Thu Dec 11 16:51:59 CET 2014
                     SOURCE: C:/Users/Chris/Play/TowerDefencePlay/app/views/index.scala.html
-                    HASH: fd63cde0d6db89ced450785bcb4b7cc3a7aba4ab
+                    HASH: 30ec24355289a55062d178c2f4d5f8fabe741764
                     MATRIX: 855->0
                     LINES: 29->1
                     -- GENERATED --
