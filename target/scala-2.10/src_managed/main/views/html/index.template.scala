@@ -29,13 +29,17 @@ object index extends BaseScalaTemplate[play.api.templates.HtmlFormat.Appendable,
 Seq[Any](format.raw/*1.1*/("""<html ng-app="towerdefence">
   <head>
     <meta charset="utf-8">
-    <title>Angular.js Example</title>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.10/angular.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.10/angular-route.min.js"></script>
+    <title>Angular.js V2</title>
     
-    <script type='text/javascript' src='"""),_display_(Seq[Any](/*8.42*/routes/*8.48*/.Assets.at("javascript/app.js"))),format.raw/*8.79*/("""'></script>
-    <script type='text/javascript' src='"""),_display_(Seq[Any](/*9.42*/routes/*9.48*/.Assets.at("javascript/controllers.js"))),format.raw/*9.87*/("""'></script>
-
+    <link rel='stylesheet' type='text/css' href='/public/css/bootstrap.css'>
+    
+    <script type="text/javascript" src="/public/js/jquery/jquery.js"></script>
+    <script type="text/javascript" src="/public/js/angular/angular.js"></script>
+    <script type="text/javascript" src="/public/js/angular/angular-route.js"></script>
+    
+    <script type='text/javascript' src="/assets/javascript/app.js"></script>
+    <script type='text/javascript' src="/assets/javascript/controllers.js"></script>
+    
   </head>
   <body>
     <div ng-view></div>
@@ -52,11 +56,11 @@ Seq[Any](format.raw/*1.1*/("""<html ng-app="towerdefence">
 }
                 /*
                     -- GENERATED --
-                    DATE: Wed Nov 26 16:08:24 CET 2014
-                    SOURCE: E:/Martin/Studium/Play/projects/TowerDefence-play/app/views/index.scala.html
-                    HASH: c9fd68609f01486932c276b3c21b3e1028113e08
-                    MATRIX: 855->0|1240->350|1254->356|1306->387|1395->441|1409->447|1469->486
-                    LINES: 29->1|36->8|36->8|36->8|37->9|37->9|37->9
+                    DATE: Thu Dec 11 13:34:40 CET 2014
+                    SOURCE: C:/Users/Chris/Play/TowerDefencePlay/app/views/index.scala.html
+                    HASH: fd63cde0d6db89ced450785bcb4b7cc3a7aba4ab
+                    MATRIX: 855->0
+                    LINES: 29->1
                     -- GENERATED --
                 */
             

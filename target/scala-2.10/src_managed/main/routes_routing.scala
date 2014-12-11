@@ -1,6 +1,6 @@
-// @SOURCE:E:/Martin/Studium/Play/projects/TowerDefence-play/conf/routes
-// @HASH:f151be5f27324b98ba3e707f225d42cfee9bc5d5
-// @DATE:Wed Nov 26 14:59:48 CET 2014
+// @SOURCE:C:/Users/Chris/Play/TowerDefencePlay/conf/routes
+// @HASH:4165c046933162cc1b1e68d07f170c51cb1678a1
+// @DATE:Thu Dec 11 13:39:59 CET 2014
 
 
 import play.core._
@@ -33,17 +33,37 @@ private[this] lazy val controllers_WebController_index0 = Route("GET", PathPatte
         
 
 // @LINE:6
-private[this] lazy val controllers_WebController_index21 = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("index2"))))
+private[this] lazy val controllers_Assets_at1 = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("1"))))
         
 
 // @LINE:9
-private[this] lazy val controllers_Assets_at2 = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("assets/"),DynamicPart("file", """.+""",false))))
+private[this] lazy val controllers_Assets_at2 = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("public/css/bootstrap.css"))))
         
 
 // @LINE:10
-private[this] lazy val controllers_WebJarAssets_at3 = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("webjars/"),DynamicPart("file", """.+""",false))))
+private[this] lazy val controllers_Assets_at3 = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("public/js/jquerry/jquery.js"))))
         
-def documentation = List(("""GET""", prefix,"""controllers.WebController.index()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """index2""","""controllers.WebController.index2()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """assets/$file<.+>""","""controllers.Assets.at(path:String = "/public", file:String)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """webjars/$file<.+>""","""controllers.WebJarAssets.at(file:String)""")).foldLeft(List.empty[(String,String,String)]) { (s,e) => e.asInstanceOf[Any] match {
+
+// @LINE:11
+private[this] lazy val controllers_Assets_at4 = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("public/js/angular/angular.js"))))
+        
+
+// @LINE:12
+private[this] lazy val controllers_Assets_at5 = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("public/js/angular/angular-route.js"))))
+        
+
+// @LINE:15
+private[this] lazy val controllers_Assets_at6 = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("assets/"),DynamicPart("file", """.+""",false))))
+        
+
+// @LINE:16
+private[this] lazy val controllers_Assets_at7 = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("public/html/"),DynamicPart("file", """.+""",false))))
+        
+
+// @LINE:17
+private[this] lazy val controllers_WebJarAssets_at8 = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("webjars/"),DynamicPart("file", """.+""",false))))
+        
+def documentation = List(("""GET""", prefix,"""controllers.WebController.index()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """1""","""controllers.Assets.at(path:String = "/public/html", file:String = "index.html")"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """public/css/bootstrap.css""","""controllers.Assets.at(path:String = "/public/css", file:String = "bootstrap.css")"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """public/js/jquerry/jquery.js""","""controllers.Assets.at(path:String = "/public/js/jquerry", file:String = "jquery.js")"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """public/js/angular/angular.js""","""controllers.Assets.at(path:String = "/public/js/angular", file:String = "angular.js")"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """public/js/angular/angular-route.js""","""controllers.Assets.at(path:String = "/public/js/angular", file:String = "angular-route.js")"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """assets/$file<.+>""","""controllers.Assets.at(path:String = "/public", file:String)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """public/html/$file<.+>""","""controllers.Assets.at(path:String = "/public/html", file:String)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """webjars/$file<.+>""","""controllers.WebJarAssets.at(file:String)""")).foldLeft(List.empty[(String,String,String)]) { (s,e) => e.asInstanceOf[Any] match {
   case r @ (_,_,_) => s :+ r.asInstanceOf[(String,String,String)]
   case l => s ++ l.asInstanceOf[List[(String,String,String)]] 
 }}
@@ -60,23 +80,63 @@ case controllers_WebController_index0(params) => {
         
 
 // @LINE:6
-case controllers_WebController_index21(params) => {
-   call { 
-        invokeHandler(controllers.WebController.index2(), HandlerDef(this, "controllers.WebController", "index2", Nil,"GET", """""", Routes.prefix + """index2"""))
+case controllers_Assets_at1(params) => {
+   call(Param[String]("path", Right("/public/html")), Param[String]("file", Right("index.html"))) { (path, file) =>
+        invokeHandler(controllers.Assets.at(path, file), HandlerDef(this, "controllers.Assets", "at", Seq(classOf[String], classOf[String]),"GET", """""", Routes.prefix + """1"""))
    }
 }
         
 
 // @LINE:9
 case controllers_Assets_at2(params) => {
+   call(Param[String]("path", Right("/public/css")), Param[String]("file", Right("bootstrap.css"))) { (path, file) =>
+        invokeHandler(controllers.Assets.at(path, file), HandlerDef(this, "controllers.Assets", "at", Seq(classOf[String], classOf[String]),"GET", """ Server Site Resources""", Routes.prefix + """public/css/bootstrap.css"""))
+   }
+}
+        
+
+// @LINE:10
+case controllers_Assets_at3(params) => {
+   call(Param[String]("path", Right("/public/js/jquerry")), Param[String]("file", Right("jquery.js"))) { (path, file) =>
+        invokeHandler(controllers.Assets.at(path, file), HandlerDef(this, "controllers.Assets", "at", Seq(classOf[String], classOf[String]),"GET", """""", Routes.prefix + """public/js/jquerry/jquery.js"""))
+   }
+}
+        
+
+// @LINE:11
+case controllers_Assets_at4(params) => {
+   call(Param[String]("path", Right("/public/js/angular")), Param[String]("file", Right("angular.js"))) { (path, file) =>
+        invokeHandler(controllers.Assets.at(path, file), HandlerDef(this, "controllers.Assets", "at", Seq(classOf[String], classOf[String]),"GET", """""", Routes.prefix + """public/js/angular/angular.js"""))
+   }
+}
+        
+
+// @LINE:12
+case controllers_Assets_at5(params) => {
+   call(Param[String]("path", Right("/public/js/angular")), Param[String]("file", Right("angular-route.js"))) { (path, file) =>
+        invokeHandler(controllers.Assets.at(path, file), HandlerDef(this, "controllers.Assets", "at", Seq(classOf[String], classOf[String]),"GET", """""", Routes.prefix + """public/js/angular/angular-route.js"""))
+   }
+}
+        
+
+// @LINE:15
+case controllers_Assets_at6(params) => {
    call(Param[String]("path", Right("/public")), params.fromPath[String]("file", None)) { (path, file) =>
         invokeHandler(controllers.Assets.at(path, file), HandlerDef(this, "controllers.Assets", "at", Seq(classOf[String], classOf[String]),"GET", """ Map static resources from the /public folder to the /assets URL path""", Routes.prefix + """assets/$file<.+>"""))
    }
 }
         
 
-// @LINE:10
-case controllers_WebJarAssets_at3(params) => {
+// @LINE:16
+case controllers_Assets_at7(params) => {
+   call(Param[String]("path", Right("/public/html")), params.fromPath[String]("file", None)) { (path, file) =>
+        invokeHandler(controllers.Assets.at(path, file), HandlerDef(this, "controllers.Assets", "at", Seq(classOf[String], classOf[String]),"GET", """""", Routes.prefix + """public/html/$file<.+>"""))
+   }
+}
+        
+
+// @LINE:17
+case controllers_WebJarAssets_at8(params) => {
    call(params.fromPath[String]("file", None)) { (file) =>
         invokeHandler(controllers.WebJarAssets.at(file), HandlerDef(this, "controllers.WebJarAssets", "at", Seq(classOf[String]),"GET", """""", Routes.prefix + """webjars/$file<.+>"""))
    }

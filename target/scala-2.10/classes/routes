@@ -2,9 +2,16 @@
 # This file defines all application routes (Higher priority routes first)
 # ~~~~
 
-GET		/							controllers.WebController.index()
-GET		/index2						controllers.WebController.index2()
+GET		/										controllers.WebController.index()
+GET		/1										controllers.Assets.at(path="/public/html", file="index.html")
+
+# Server Site Resources
+GET     /public/css/bootstrap.css   			controllers.Assets.at(path="/public/css", file="bootstrap.css")
+GET     /public/js/jquerry/jquery.js     		controllers.Assets.at(path="/public/js/jquerry", file="jquery.js")
+GET     /public/js/angular/angular.js     		controllers.Assets.at(path="/public/js/angular", file="angular.js")
+GET     /public/js/angular/angular-route.js     controllers.Assets.at(path="/public/js/angular", file="angular-route.js")
 
 # Map static resources from the /public folder to the /assets URL path
 GET     /assets/*file               controllers.Assets.at(path="/public", file)
+GET     /public/html/*file     		controllers.Assets.at(path="/public/html", file)
 GET     /webjars/*file              controllers.WebJarAssets.at(file)

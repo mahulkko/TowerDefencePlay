@@ -1,0 +1,82 @@
+@(message: String, controller:de.htwg.towerdefence.controller.IGameController)
+
+@main("TowerDefense 2014") {
+	<link rel='stylesheet' href='@routes.Assets.at("stylesheets/playingfield.min.css")'>
+	<script type='text/javascript' src='@routes.Assets.at("javascript/index.js")'></script>
+	 
+	 
+	<div class="well">
+	
+	        <div class="row" id="playingfield">
+		        <table class="table table-bordered">
+		        	@for(column <- -1 until controller.getSizeYOfPlayingField()+1) {
+		        		<tr>
+		        			@for(row <- -1 until controller.getSizeXOfPlayingField()+1) {
+		        				@if(row == -1 || row == controller.getSizeXOfPlayingField() || column == -1 || column == controller.getSizeYOfPlayingField()) {
+		        					<td class="field border"  id="@row,@column">@row,@column</td>
+		        				} else {
+		        					@if(controller.isTowerOnField(row, column)) {
+										<td class="field tower"  id="@row,@column">@row,@column</td>
+									} else { @if(controller.isMobOnField(row, column)) {
+										<td class="field mob"  id="@row,@column">@row,@column</td>
+									} else {
+										<td class="field"  id="@row,@column">@row,@column</td>
+									}}
+		        				}
+		        			}
+		        		</tr>
+		        	}
+		        </table>
+	        </div>
+
+
+
+        <div class="row" id="TowerSelection">
+        	<h4>
+        	   <span class="label label-default">Tower Auswahl:</span>
+        	   <div class="btn-group">
+		           <button type="button" class="btn btn-primary active">Standart Tower</button>
+				   <button id="frezzetower" type="button" class="btn btn-default active">Frezze Tower</button>
+				   <button id="createmob" type="button" class="btn btn-default active">Send Mob</button>
+			   </div>
+			</h4>
+        </div>
+        
+        
+        <div class="row">
+        
+	        <div class="col-md-4" id="TowerProperties">
+	        	<h3><span class="label label-default">Eigenschaften:</span></h3>
+	        	<ul>
+	        		<li>
+	        			<span>Speed:</span>
+	        		</li>
+	        		<li>
+	        			<span>Damage:</span>
+	        		</li>
+	        		<li>
+	        			<span>Range:</span>
+	        		</li>
+	        	</ul>
+	        </div>
+	        
+	        <div class="col-md-4" id="PlayerProperties">
+	        	<h3><span class="label label-default">Player: @controller.getPlayerName()</span></h3>
+	        	<ul>
+	        		<li>
+	        			<span>Life: @controller.getPlayerMoney()</span>
+	        		</li>
+	        		<li>
+	        			<span>Money: @controller.getPlayerLife()</span>
+	        		</li>
+	        	</ul>
+	        </div>
+	        
+	    </div>
+        
+        
+        <h6><span class="row" id="message">@message</span></h6>
+        <div class="row" id="result"></div>
+        
+    </div>
+}

@@ -1,3 +1,3 @@
-towerdefence.controller('CountryDetailCtrl', function ($scope, $routeParams){
-     console.log($routeParams);
+towerdefence.controller('Ctrl', function ($scope, $routeParams){
+     console.log("Open new Window");
 });
