@@ -1,6 +1,6 @@
 // @SOURCE:C:/Users/Chris/Play/TowerDefencePlay/conf/routes
-// @HASH:c49ba4532713aa5b41b8756d3d296ed753cca1b7
-// @DATE:Thu Dec 11 16:51:59 CET 2014
+// @HASH:066254543135a8253a6dac8473a3169b9f18a57c
+// @DATE:Tue Dec 16 20:13:11 CET 2014
 
 import Routes.{prefix => _prefix, defaultPrefix => _defaultPrefix}
 import play.core._
@@ -13,6 +13,7 @@ import play.libs.F
 import Router.queryString
 
 
+// @LINE:18
 // @LINE:17
 // @LINE:16
 // @LINE:15
@@ -56,6 +57,7 @@ def at(file:String): Call = {
 }
                           
 
+// @LINE:18
 // @LINE:17
 // @LINE:16
 // @LINE:15
@@ -64,6 +66,7 @@ def at(file:String): Call = {
 class ReverseAssets {
     
 
+// @LINE:18
 // @LINE:17
 // @LINE:16
 // @LINE:15
@@ -72,19 +75,22 @@ class ReverseAssets {
 def at(path:String, file:String): Call = {
    (path: @unchecked, file: @unchecked) match {
 // @LINE:6
-case (path, file) if path == "/public/html" && file == "index.html" => Call("GET", _prefix + { _defaultPrefix } + "1")
+case (path, file) if path == "/public/html" && file == "test.html" => Call("GET", _prefix + { _defaultPrefix } + "test")
                                                         
 // @LINE:11
 case (path, file) if path == "/public" => Call("GET", _prefix + { _defaultPrefix } + "assets/" + implicitly[PathBindable[String]].unbind("file", file))
                                                         
 // @LINE:15
-case (path, file) if path == "/public/html" => Call("GET", _prefix + { _defaultPrefix } + "public/html/" + implicitly[PathBindable[String]].unbind("file", file))
+case (path, file) if path == "/public" => Call("GET", _prefix + { _defaultPrefix } + implicitly[PathBindable[String]].unbind("file", file))
                                                         
 // @LINE:16
-case (path, file) if path == "/public/js" => Call("GET", _prefix + { _defaultPrefix } + "public/js/" + implicitly[PathBindable[String]].unbind("file", file))
+case (path, file) if path == "/public/html" => Call("GET", _prefix + { _defaultPrefix } + "html/" + implicitly[PathBindable[String]].unbind("file", file))
                                                         
 // @LINE:17
-case (path, file) if path == "/public/css" => Call("GET", _prefix + { _defaultPrefix } + "public/css/" + implicitly[PathBindable[String]].unbind("file", file))
+case (path, file) if path == "/public/js" => Call("GET", _prefix + { _defaultPrefix } + "js/" + implicitly[PathBindable[String]].unbind("file", file))
+                                                        
+// @LINE:18
+case (path, file) if path == "/public/css" => Call("GET", _prefix + { _defaultPrefix } + "css/" + implicitly[PathBindable[String]].unbind("file", file))
                                                         
    }
 }
@@ -96,6 +102,7 @@ case (path, file) if path == "/public/css" => Call("GET", _prefix + { _defaultPr
                   
 
 
+// @LINE:18
 // @LINE:17
 // @LINE:16
 // @LINE:15
@@ -154,6 +161,7 @@ def at : JavascriptReverseRoute = JavascriptReverseRoute(
 }
               
 
+// @LINE:18
 // @LINE:17
 // @LINE:16
 // @LINE:15
@@ -162,6 +170,7 @@ def at : JavascriptReverseRoute = JavascriptReverseRoute(
 class ReverseAssets {
     
 
+// @LINE:18
 // @LINE:17
 // @LINE:16
 // @LINE:15
@@ -171,20 +180,23 @@ def at : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.Assets.at",
    """
       function(path, file) {
-      if (path == """ + implicitly[JavascriptLitteral[String]].to("/public/html") + """ && file == """ + implicitly[JavascriptLitteral[String]].to("index.html") + """) {
-      return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "1"})
+      if (path == """ + implicitly[JavascriptLitteral[String]].to("/public/html") + """ && file == """ + implicitly[JavascriptLitteral[String]].to("test.html") + """) {
+      return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "test"})
       }
       if (path == """ + implicitly[JavascriptLitteral[String]].to("/public") + """) {
       return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "assets/" + (""" + implicitly[PathBindable[String]].javascriptUnbind + """)("file", file)})
       }
+      if (path == """ + implicitly[JavascriptLitteral[String]].to("/public") + """) {
+      return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + (""" + implicitly[PathBindable[String]].javascriptUnbind + """)("file", file)})
+      }
       if (path == """ + implicitly[JavascriptLitteral[String]].to("/public/html") + """) {
-      return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "public/html/" + (""" + implicitly[PathBindable[String]].javascriptUnbind + """)("file", file)})
+      return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "html/" + (""" + implicitly[PathBindable[String]].javascriptUnbind + """)("file", file)})
       }
       if (path == """ + implicitly[JavascriptLitteral[String]].to("/public/js") + """) {
-      return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "public/js/" + (""" + implicitly[PathBindable[String]].javascriptUnbind + """)("file", file)})
+      return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "js/" + (""" + implicitly[PathBindable[String]].javascriptUnbind + """)("file", file)})
       }
       if (path == """ + implicitly[JavascriptLitteral[String]].to("/public/css") + """) {
-      return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "public/css/" + (""" + implicitly[PathBindable[String]].javascriptUnbind + """)("file", file)})
+      return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "css/" + (""" + implicitly[PathBindable[String]].javascriptUnbind + """)("file", file)})
       }
       }
    """
@@ -197,6 +209,7 @@ def at : JavascriptReverseRoute = JavascriptReverseRoute(
         
 
 
+// @LINE:18
 // @LINE:17
 // @LINE:16
 // @LINE:15
@@ -241,6 +254,7 @@ def at(file:String): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
 }
                           
 
+// @LINE:18
 // @LINE:17
 // @LINE:16
 // @LINE:15
@@ -251,7 +265,7 @@ class ReverseAssets {
 
 // @LINE:6
 def at(path:String, file:String): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
-   controllers.Assets.at(path, file), HandlerDef(this, "controllers.Assets", "at", Seq(classOf[String], classOf[String]), "GET", """""", _prefix + """1""")
+   controllers.Assets.at(path, file), HandlerDef(this, "controllers.Assets", "at", Seq(classOf[String], classOf[String]), "GET", """""", _prefix + """test""")
 )
                       
     

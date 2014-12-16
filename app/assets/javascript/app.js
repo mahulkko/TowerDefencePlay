@@ -1,13 +1,19 @@
+/**
+ * Root Object that holds all Modules for this app
+ */
 var towerdefenceApp = angular.module('towerdefenceApp', ['ngRoute']);
 
+/**
+ * Routing Table to get new Site behind the #
+ */
 towerdefenceApp.config( function($routeProvider) {
   $routeProvider.
     when('/', {
-      templateUrl: '/public/html/test.html',
+      templateUrl: '/game.html',
       controller: 'GameContextCtrl'
     }).
-    when('/tower', {
-        templateUrl: '/public/html/towerproperties.html',
+    when('/test', {
+        templateUrl: '/html/test.html',
         controller: 'GameContextCtrl'
       }).
     otherwise({

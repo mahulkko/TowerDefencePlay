@@ -14,6 +14,10 @@ public class WebController extends Controller {
     }
     
     public static Result updateGameContext() {
-    	return ok(gameController.updateGameContext("kein Game Context"));
+    	// Get the POST Attribute and convert it to Test
+    	String currentGameContext = request().body().asText();
+    	System.out.println("Current Game Context: " + currentGameContext);
+    	return ok(gameController.updateGameContext(currentGameContext));
     }
+
 }

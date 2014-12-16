@@ -1,8 +1,13 @@
+/**
+ * Factory that handle all Request to the Server.
+ */
 towerdefenceApp.factory('gameContextFactory', function($http){
 	return { 
-		updateNewGameContext: function(callback){
-			$http.get('/update').success(callback);
-			console.log(callback);
+		
+		// GET JsonString with Game Context from the Server via /update URL
+		updateNewGameContext: function(gameContext){
+			$http.get('/update').success(gameContext);
+			console.log(gameContext);
 		}
 	};
 });
