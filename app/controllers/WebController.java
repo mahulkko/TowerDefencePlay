@@ -14,10 +14,19 @@ public class WebController extends Controller {
     }
     
     public static Result updateGameContext() {
-    	// Get the POST Attribute and convert it to Test
-    	String currentGameContext = request().body().asText();
-    	System.out.println("Current Game Context: " + currentGameContext);
+    	return ok(gameController.updateGameContext("Update Methode"));
+    }
+    
+    public static Result postGameContext() {
+    	String currentGameContext = request().body().asJson().toString();
+    	System.out.println("WEBCONTROLLER  Current Game Context: " + currentGameContext);
     	return ok(gameController.updateGameContext(currentGameContext));
+    }
+    
+    public static Result setTower(int x, int y) {
+    	String currentGameContext = request().body().asJson().toString();
+    	System.out.println("WEBCONTROLLER  Current Game Context for Set Tower: " + currentGameContext);
+    	return ok(gameController.setTowerToPostion(currentGameContext, x, y));
     }
 
 }

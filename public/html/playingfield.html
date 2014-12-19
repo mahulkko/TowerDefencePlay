@@ -1,0 +1,9 @@
+<div id="playingfield">  
+	<table ng-table class="table table-bordered">
+		<tr ng-repeat="rows in gameContext.playingField.fieldArray">
+			<td class="field" ng-repeat="colum in rows" id="field{{$index}},{{$parent.$index}}" ng-click='clickOnField($index,$parent.$index)'>
+				{{$index}}, {{$parent.$index}}
+			</td>
+		</tr>
+	</table>
+</div>

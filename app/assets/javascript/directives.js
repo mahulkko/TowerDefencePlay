@@ -27,6 +27,28 @@ towerdefenceApp.directive('player', function(){
 	return {
 		restrict: 'E',
 		transclude: true,
-		templateUrl: '/html/playerproperties.html'
+		templateUrl: '/html/player.html'
+	};
+});
+
+/**
+ * Field Properties Directive
+ */
+towerdefenceApp.directive('fieldproperties', function(){
+	return {
+		restrict: 'E',
+		transclude: true,
+		templateUrl: '/html/fieldproperties.html'
+	};
+});
+
+/**
+ * Field Properties Directive
+ */
+towerdefenceApp.directive('controll', function(){
+	return {
+		restrict: 'E',
+		transclude: true,
+		templateUrl: '/html/controll.html'
 	};
 });
