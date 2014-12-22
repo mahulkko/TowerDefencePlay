@@ -25,7 +25,7 @@ public class WebController extends Controller {
     
     public static Result setTower(int x, int y) {
     	String currentGameContext = request().body().asJson().toString();
-    	System.out.println("WEBCONTROLLER  Current Game Context for Set Tower: " + currentGameContext);
+    	System.out.println("WEBCONTROLLER  Current Game Context for Set Tower to x="+x + " y="+y + ";   " + currentGameContext);
     	return ok(gameController.setTowerToPostion(currentGameContext, x, y));
     }
 

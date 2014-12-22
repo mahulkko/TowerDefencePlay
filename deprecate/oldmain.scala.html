@@ -54,3 +54,25 @@
     </div>
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div ng-if='checkFieldContent(colum) == "-"'>
+					{{$index}}, {{$parent.$parent.$index}}, {{colum}}
+				</div>
+				<div ng-if='checkFieldContent(colum) == "tower"'>
+					Tower on Field
+				</div>
+				<div ng-if='checkFieldContent(colum) == "mob"'>
+					Mob on Field
+				</div>

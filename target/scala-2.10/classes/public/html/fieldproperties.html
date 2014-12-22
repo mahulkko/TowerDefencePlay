@@ -1,14 +1,14 @@
+<!-- FieldProperties -->
+
 <div id="FieldProperties">
-	<h3><span class="label label-default">Eigenschaften:</span></h3>
+	<h3>
+		<span class="label label-default" style="text-transform: capitalize">
+			Eigenschaften: {{fieldType}}
+		</span>
+	</h3>
 	<ul>
-		<li>
-			<span>Speed: {{todo.mobOrTowerOfCurrentFieldID}}</span>
-		</li>
-		<li>
-			<span>Damage: {{todo.mobOrTowerOfCurrentFieldID}}</span>
-		</li>
-		<li>
-			<span>Range:{{todo.mobOrTowerOfCurrentFieldID}}</span>
+		<li ng-repeat="(key, value) in fieldProperties" ng-if="$index < 7 " style="text-transform: capitalize"> 
+			{{key}} : {{value}}
 		</li>
 	</ul>
 </div>
