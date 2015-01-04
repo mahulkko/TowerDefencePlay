@@ -29,7 +29,7 @@ object index extends BaseScalaTemplate[play.api.templates.HtmlFormat.Appendable,
 Seq[Any](format.raw/*1.1*/("""<html ng-app="towerdefenceApp">
   <head>
     <meta charset="utf-8">
-    <title>Tower Defence 2015</title>
+    <title>Tower Defence</title>
     
     <link rel='stylesheet' type='text/css' href='/css/bootstrap.css'>
     
@@ -58,9 +58,9 @@ Seq[Any](format.raw/*1.1*/("""<html ng-app="towerdefenceApp">
 }
                 /*
                     -- GENERATED --
-                    DATE: Mon Dec 22 11:32:17 CET 2014
+                    DATE: Sat Jan 03 10:55:35 CET 2015
                     SOURCE: /home/chris/Play/projects/TowerDefencePlay/app/views/index.scala.html
-                    HASH: 987a43060c076da3f8db1d6bc63e3b8ee3c6038f
+                    HASH: 47af9326c0985de5cd0a42f598000792fd79db9c
                     MATRIX: 855->0
                     LINES: 29->1
                     -- GENERATED --

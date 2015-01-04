@@ -1,5 +1,16 @@
 <!-- FieldProperties -->
 
+<!-- CSS -->
+<style type="text/css">
+<!-- 
+	#label {
+   		margin-top: 5px;
+	}
+-->
+</style>
+
+
+<!-- HTML -->
 <div id="FieldProperties">
 	<h3>
 		<span class="label label-default" style="text-transform: capitalize">
@@ -7,7 +18,7 @@
 		</span>
 	</h3>
 	<ul>
-		<li ng-repeat="(key, value) in fieldProperties" ng-if="$index < 7 " style="text-transform: capitalize"> 
+		<li ng-repeat="(key, value) in fieldProperties" ng-if="filterProperties(key)" style="text-transform: capitalize"> 
 			{{key}} : {{value}}
 		</li>
 	</ul>

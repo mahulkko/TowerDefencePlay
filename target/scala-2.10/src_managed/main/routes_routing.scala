@@ -1,6 +1,6 @@
 // @SOURCE:/home/chris/Play/projects/TowerDefencePlay/conf/routes
-// @HASH:2e9678f3f3cf116151650a617b23579a90addc70
-// @DATE:Mon Dec 22 11:32:15 CET 2014
+// @HASH:cb23106fb4e2c3675dbdc236e9e9493cdf8cfba0
+// @DATE:Sat Jan 03 16:35:27 CET 2015
 
 
 import play.core._
@@ -37,15 +37,15 @@ private[this] lazy val controllers_Assets_at1 = Route("GET", PathPattern(List(St
         
 
 // @LINE:8
-private[this] lazy val controllers_WebController_updateGameContext2 = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("update"))))
+private[this] lazy val controllers_WebController_updateGameContext2 = Route("POST", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("update"))))
         
 
 // @LINE:9
-private[this] lazy val controllers_WebController_postGameContext3 = Route("POST", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("post"))))
+private[this] lazy val controllers_WebController_setTower3 = Route("POST", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("settower/"),DynamicPart("x", """[^/]+""",true),StaticPart("/"),DynamicPart("y", """[^/]+""",true))))
         
 
 // @LINE:10
-private[this] lazy val controllers_WebController_setTower4 = Route("POST", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("settower/"),DynamicPart("x", """[^/]+""",true),StaticPart("/"),DynamicPart("y", """[^/]+""",true))))
+private[this] lazy val controllers_WebController_sendMob4 = Route("POST", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("sendMob"))))
         
 
 // @LINE:13
@@ -71,7 +71,7 @@ private[this] lazy val controllers_Assets_at9 = Route("GET", PathPattern(List(St
 // @LINE:20
 private[this] lazy val controllers_Assets_at10 = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("css/"),DynamicPart("file", """.+""",false))))
         
-def documentation = List(("""GET""", prefix,"""controllers.WebController.index()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """test""","""controllers.Assets.at(path:String = "/public/html", file:String = "test.html")"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """update""","""controllers.WebController.updateGameContext()"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """post""","""controllers.WebController.postGameContext()"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """settower/$x<[^/]+>/$y<[^/]+>""","""controllers.WebController.setTower(x:Integer, y:Integer)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """assets/$file<.+>""","""controllers.Assets.at(path:String = "/public", file:String)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """webjars/$file<.+>""","""controllers.WebJarAssets.at(file:String)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """$file<.+>""","""controllers.Assets.at(path:String = "/public", file:String)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """html/$file<.+>""","""controllers.Assets.at(path:String = "/public/html", file:String)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """js/$file<.+>""","""controllers.Assets.at(path:String = "/public/js", file:String)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """css/$file<.+>""","""controllers.Assets.at(path:String = "/public/css", file:String)""")).foldLeft(List.empty[(String,String,String)]) { (s,e) => e.asInstanceOf[Any] match {
+def documentation = List(("""GET""", prefix,"""controllers.WebController.index()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """test""","""controllers.Assets.at(path:String = "/public/html", file:String = "test.html")"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """update""","""controllers.WebController.updateGameContext()"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """settower/$x<[^/]+>/$y<[^/]+>""","""controllers.WebController.setTower(x:Integer, y:Integer)"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """sendMob""","""controllers.WebController.sendMob()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """assets/$file<.+>""","""controllers.Assets.at(path:String = "/public", file:String)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """webjars/$file<.+>""","""controllers.WebJarAssets.at(file:String)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """$file<.+>""","""controllers.Assets.at(path:String = "/public", file:String)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """html/$file<.+>""","""controllers.Assets.at(path:String = "/public/html", file:String)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """js/$file<.+>""","""controllers.Assets.at(path:String = "/public/js", file:String)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """css/$file<.+>""","""controllers.Assets.at(path:String = "/public/css", file:String)""")).foldLeft(List.empty[(String,String,String)]) { (s,e) => e.asInstanceOf[Any] match {
   case r @ (_,_,_) => s :+ r.asInstanceOf[(String,String,String)]
   case l => s ++ l.asInstanceOf[List[(String,String,String)]] 
 }}
@@ -98,23 +98,23 @@ case controllers_Assets_at1(params) => {
 // @LINE:8
 case controllers_WebController_updateGameContext2(params) => {
    call { 
-        invokeHandler(controllers.WebController.updateGameContext(), HandlerDef(this, "controllers.WebController", "updateGameContext", Nil,"GET", """""", Routes.prefix + """update"""))
+        invokeHandler(controllers.WebController.updateGameContext(), HandlerDef(this, "controllers.WebController", "updateGameContext", Nil,"POST", """""", Routes.prefix + """update"""))
    }
 }
         
 
 // @LINE:9
-case controllers_WebController_postGameContext3(params) => {
-   call { 
-        invokeHandler(controllers.WebController.postGameContext(), HandlerDef(this, "controllers.WebController", "postGameContext", Nil,"POST", """""", Routes.prefix + """post"""))
+case controllers_WebController_setTower3(params) => {
+   call(params.fromPath[Integer]("x", None), params.fromPath[Integer]("y", None)) { (x, y) =>
+        invokeHandler(controllers.WebController.setTower(x, y), HandlerDef(this, "controllers.WebController", "setTower", Seq(classOf[Integer], classOf[Integer]),"POST", """""", Routes.prefix + """settower/$x<[^/]+>/$y<[^/]+>"""))
    }
 }
         
 
 // @LINE:10
-case controllers_WebController_setTower4(params) => {
-   call(params.fromPath[Integer]("x", None), params.fromPath[Integer]("y", None)) { (x, y) =>
-        invokeHandler(controllers.WebController.setTower(x, y), HandlerDef(this, "controllers.WebController", "setTower", Seq(classOf[Integer], classOf[Integer]),"POST", """""", Routes.prefix + """settower/$x<[^/]+>/$y<[^/]+>"""))
+case controllers_WebController_sendMob4(params) => {
+   call { 
+        invokeHandler(controllers.WebController.sendMob(), HandlerDef(this, "controllers.WebController", "sendMob", Nil,"POST", """""", Routes.prefix + """sendMob"""))
    }
 }
         

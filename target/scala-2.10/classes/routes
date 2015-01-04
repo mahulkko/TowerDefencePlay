@@ -5,9 +5,9 @@
 GET		/						controllers.WebController.index()
 GET		/test					controllers.Assets.at(path="/public/html", file="test.html")
 
-GET		/update					controllers.WebController.updateGameContext()
-POST	/post					controllers.WebController.postGameContext()
+POST	/update					controllers.WebController.updateGameContext()
 POST 	/settower/:x/:y			controllers.WebController.setTower(x: Integer, y: Integer)
+POST	/sendMob				controllers.WebController.sendMob()
 
 # Map static resources from the /public folder to the /assets URL path
 GET     /assets/*file            controllers.Assets.at(path="/public", file)

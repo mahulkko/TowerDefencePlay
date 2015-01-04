@@ -1,8 +1,20 @@
 <!-- Controll -->
 
+<!-- CSS -->
+<style type="text/css">
+<!-- 
+	#label {
+   		margin-top: 10px;
+	}
+-->
+</style>
+
+
+<!-- HTML -->
 <div id="controll">
 		<h3><span class="label label-default">Tower Auswahl:</span></h3>
-		<button ng-click='uiState = "setTower"' id="setTower" type="button">Set Tower</button>
-		<button ng-click='uiState = "showInfo"' id="showInfo" type="button">Show Info</button>
-		<button ng-click='uiState = "pause"' id="pause" type="button">Pause</button>
+		<button ng-click='uiState = "setTower"' id="setTower" type="button" class="btn btn-default" >Set Tower</button>
+		<button ng-click='uiState = "showInfo"' id="showInfo" type="button" class="btn btn-default" >Show Info</button>
+		<button ng-click='pause()' id="pause" type="button" class="btn btn-default" >Pause</button>
+		<button ng-click='sendMob()' id="sendMob" type="button" class="btn btn-default" >Send Mob</button>
 </div>

@@ -1,6 +1,6 @@
 // @SOURCE:/home/chris/Play/projects/TowerDefencePlay/conf/routes
-// @HASH:2e9678f3f3cf116151650a617b23579a90addc70
-// @DATE:Mon Dec 22 11:32:15 CET 2014
+// @HASH:cb23106fb4e2c3675dbdc236e9e9493cdf8cfba0
+// @DATE:Sat Jan 03 16:35:27 CET 2015
 
 import Routes.{prefix => _prefix, defaultPrefix => _defaultPrefix}
 import play.core._
@@ -33,13 +33,13 @@ package controllers {
 class ReverseWebController {
     
 
-// @LINE:9
-def postGameContext(): Call = {
-   Call("POST", _prefix + { _defaultPrefix } + "post")
+// @LINE:10
+def sendMob(): Call = {
+   Call("POST", _prefix + { _defaultPrefix } + "sendMob")
 }
                                                 
 
-// @LINE:10
+// @LINE:9
 def setTower(x:Integer, y:Integer): Call = {
    Call("POST", _prefix + { _defaultPrefix } + "settower/" + implicitly[PathBindable[Integer]].unbind("x", x) + "/" + implicitly[PathBindable[Integer]].unbind("y", y))
 }
@@ -47,7 +47,7 @@ def setTower(x:Integer, y:Integer): Call = {
 
 // @LINE:8
 def updateGameContext(): Call = {
-   Call("GET", _prefix + { _defaultPrefix } + "update")
+   Call("POST", _prefix + { _defaultPrefix } + "update")
 }
                                                 
 
@@ -138,18 +138,18 @@ package controllers.javascript {
 class ReverseWebController {
     
 
-// @LINE:9
-def postGameContext : JavascriptReverseRoute = JavascriptReverseRoute(
-   "controllers.WebController.postGameContext",
+// @LINE:10
+def sendMob : JavascriptReverseRoute = JavascriptReverseRoute(
+   "controllers.WebController.sendMob",
    """
       function() {
-      return _wA({method:"POST", url:"""" + _prefix + { _defaultPrefix } + """" + "post"})
+      return _wA({method:"POST", url:"""" + _prefix + { _defaultPrefix } + """" + "sendMob"})
       }
    """
 )
                         
 
-// @LINE:10
+// @LINE:9
 def setTower : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.WebController.setTower",
    """
@@ -165,7 +165,7 @@ def updateGameContext : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.WebController.updateGameContext",
    """
       function() {
-      return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "update"})
+      return _wA({method:"POST", url:"""" + _prefix + { _defaultPrefix } + """" + "update"})
       }
    """
 )
@@ -272,13 +272,13 @@ package controllers.ref {
 class ReverseWebController {
     
 
-// @LINE:9
-def postGameContext(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
-   controllers.WebController.postGameContext(), HandlerDef(this, "controllers.WebController", "postGameContext", Seq(), "POST", """""", _prefix + """post""")
+// @LINE:10
+def sendMob(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
+   controllers.WebController.sendMob(), HandlerDef(this, "controllers.WebController", "sendMob", Seq(), "POST", """""", _prefix + """sendMob""")
 )
                       
 
-// @LINE:10
+// @LINE:9
 def setTower(x:Integer, y:Integer): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    controllers.WebController.setTower(x, y), HandlerDef(this, "controllers.WebController", "setTower", Seq(classOf[Integer], classOf[Integer]), "POST", """""", _prefix + """settower/$x<[^/]+>/$y<[^/]+>""")
 )
@@ -286,7 +286,7 @@ def setTower(x:Integer, y:Integer): play.api.mvc.HandlerRef[_] = new play.api.mv
 
 // @LINE:8
 def updateGameContext(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
-   controllers.WebController.updateGameContext(), HandlerDef(this, "controllers.WebController", "updateGameContext", Seq(), "GET", """""", _prefix + """update""")
+   controllers.WebController.updateGameContext(), HandlerDef(this, "controllers.WebController", "updateGameContext", Seq(), "POST", """""", _prefix + """update""")
 )
                       
 

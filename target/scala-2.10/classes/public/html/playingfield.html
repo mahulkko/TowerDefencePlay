@@ -1,29 +1,35 @@
 <!-- Playingfield -->
 
+<!-- CSS -->
 <style type="text/css">
 <!-- 
-#tower {
-	background-color: #FF0000;
-}
-#mob {
-	background-color: #0000FF;
-}
-#empty {
-	background-color: #FFFFFF;
-}
+	.borderless tbody tr td, .borderless thead tr th {
+    	border: none;
+	}
+	#tower {
+		background-color: #FF0000;
+	}
+	#mob {
+		background-color: #0000FF;
+	}
+	#empty {
+		background-color: #FFFFFF;
+	}
 -->
 </style>
 
+
+<!-- HTML -->
 <div id="playingfield">  
-	<table ng-table class="table table-bordered">
+	<table ng-table class='table borderless'>
 		<tr ng-repeat="rows in gameContext.playingField.fieldArray">
 			<td class="field" ng-repeat="colum in rows" id="field{{$index}},{{$parent.$index}}" 
-				ng-click='clickOnField($index, $parent.$index, colum)' ng-switch on='checkFieldContent(colum)'>
+				ng-click='clickOnField($index, $parent.$index, colum)' ng-switch on='getFieldContent(colum)'>
 				<div ng-switch-when="tower" id="tower" >
-        			Tower on Field
+        			{{$index}}, {{$parent.$parent.$index}}, Tower on Field
     			</div>
-    			<div ng-switch-when="mob" id="tower">
-        			Mob on Field
+    			<div ng-switch-when="mob" id="mob">
+        			{{$index}}, {{$parent.$parent.$index}}, Mob on Field
     			</div>
 			    <div ng-switch-default id="empty">
 			        {{$index}}, {{$parent.$parent.$index}}, {{colum}}
