@@ -4,7 +4,7 @@
 		module="towerdefence-play-build"
 		revision="0.1-SNAPSHOT"
 		status="integration"
-		publication="20141126134044"
+		publication="20150105102843"
 		e:sbtVersion="0.13" e:scalaVersion="2.10"
 	>
 		<description>
