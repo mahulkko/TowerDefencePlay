@@ -1,6 +1,6 @@
-// @SOURCE:E:/Martin/Studium/Play/projects/TowerDefence-play/conf/routes
-// @HASH:0f117c249d07fa915ee2355e975e166b8a0c22ea
-// @DATE:Mon Jan 05 10:29:11 CET 2015
+// @SOURCE:/home/chris/Play/projects/TowerDefencePlay/conf/routes
+// @HASH:b2aa9a6f57f7780dd87c6fd5f99f3946005895d9
+// @DATE:Mon Jan 05 17:39:46 CET 2015
 
 
 import play.core._
@@ -48,30 +48,34 @@ private[this] lazy val controllers_WebController_setTower3 = Route("POST", PathP
 private[this] lazy val controllers_WebController_sendMob4 = Route("POST", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("sendMob"))))
         
 
-// @LINE:13
-private[this] lazy val controllers_Assets_at5 = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("assets/"),DynamicPart("file", """.+""",false))))
+// @LINE:11
+private[this] lazy val controllers_WebController_upgradeTower5 = Route("POST", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("upgradetower/"),DynamicPart("x", """[^/]+""",true),StaticPart("/"),DynamicPart("y", """[^/]+""",true))))
         
 
 // @LINE:14
-private[this] lazy val controllers_WebJarAssets_at6 = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("webjars/"),DynamicPart("file", """.+""",false))))
+private[this] lazy val controllers_Assets_at6 = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("assets/"),DynamicPart("file", """.+""",false))))
         
 
-// @LINE:17
-private[this] lazy val controllers_Assets_at7 = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),DynamicPart("file", """.+""",false))))
+// @LINE:15
+private[this] lazy val controllers_WebJarAssets_at7 = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("webjars/"),DynamicPart("file", """.+""",false))))
         
 
 // @LINE:18
-private[this] lazy val controllers_Assets_at8 = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("html/"),DynamicPart("file", """.+""",false))))
+private[this] lazy val controllers_Assets_at8 = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),DynamicPart("file", """.+""",false))))
         
 
 // @LINE:19
-private[this] lazy val controllers_Assets_at9 = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("js/"),DynamicPart("file", """.+""",false))))
+private[this] lazy val controllers_Assets_at9 = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("html/"),DynamicPart("file", """.+""",false))))
         
 
 // @LINE:20
-private[this] lazy val controllers_Assets_at10 = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("css/"),DynamicPart("file", """.+""",false))))
+private[this] lazy val controllers_Assets_at10 = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("js/"),DynamicPart("file", """.+""",false))))
         
-def documentation = List(("""GET""", prefix,"""controllers.WebController.index()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """test""","""controllers.Assets.at(path:String = "/public/html", file:String = "test.html")"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """update""","""controllers.WebController.updateGameContext()"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """settower/$x<[^/]+>/$y<[^/]+>""","""controllers.WebController.setTower(x:Integer, y:Integer)"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """sendMob""","""controllers.WebController.sendMob()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """assets/$file<.+>""","""controllers.Assets.at(path:String = "/public", file:String)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """webjars/$file<.+>""","""controllers.WebJarAssets.at(file:String)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """$file<.+>""","""controllers.Assets.at(path:String = "/public", file:String)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """html/$file<.+>""","""controllers.Assets.at(path:String = "/public/html", file:String)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """js/$file<.+>""","""controllers.Assets.at(path:String = "/public/js", file:String)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """css/$file<.+>""","""controllers.Assets.at(path:String = "/public/css", file:String)""")).foldLeft(List.empty[(String,String,String)]) { (s,e) => e.asInstanceOf[Any] match {
+
+// @LINE:21
+private[this] lazy val controllers_Assets_at11 = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("css/"),DynamicPart("file", """.+""",false))))
+        
+def documentation = List(("""GET""", prefix,"""controllers.WebController.index()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """test""","""controllers.Assets.at(path:String = "/public/html", file:String = "test.html")"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """update""","""controllers.WebController.updateGameContext()"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """settower/$x<[^/]+>/$y<[^/]+>""","""controllers.WebController.setTower(x:Integer, y:Integer)"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """sendMob""","""controllers.WebController.sendMob()"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """upgradetower/$x<[^/]+>/$y<[^/]+>""","""controllers.WebController.upgradeTower(x:Integer, y:Integer)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """assets/$file<.+>""","""controllers.Assets.at(path:String = "/public", file:String)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """webjars/$file<.+>""","""controllers.WebJarAssets.at(file:String)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """$file<.+>""","""controllers.Assets.at(path:String = "/public", file:String)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """html/$file<.+>""","""controllers.Assets.at(path:String = "/public/html", file:String)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """js/$file<.+>""","""controllers.Assets.at(path:String = "/public/js", file:String)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """css/$file<.+>""","""controllers.Assets.at(path:String = "/public/css", file:String)""")).foldLeft(List.empty[(String,String,String)]) { (s,e) => e.asInstanceOf[Any] match {
   case r @ (_,_,_) => s :+ r.asInstanceOf[(String,String,String)]
   case l => s ++ l.asInstanceOf[List[(String,String,String)]] 
 }}
@@ -119,48 +123,56 @@ case controllers_WebController_sendMob4(params) => {
 }
         
 
-// @LINE:13
-case controllers_Assets_at5(params) => {
+// @LINE:11
+case controllers_WebController_upgradeTower5(params) => {
+   call(params.fromPath[Integer]("x", None), params.fromPath[Integer]("y", None)) { (x, y) =>
+        invokeHandler(controllers.WebController.upgradeTower(x, y), HandlerDef(this, "controllers.WebController", "upgradeTower", Seq(classOf[Integer], classOf[Integer]),"POST", """""", Routes.prefix + """upgradetower/$x<[^/]+>/$y<[^/]+>"""))
+   }
+}
+        
+
+// @LINE:14
+case controllers_Assets_at6(params) => {
    call(Param[String]("path", Right("/public")), params.fromPath[String]("file", None)) { (path, file) =>
         invokeHandler(controllers.Assets.at(path, file), HandlerDef(this, "controllers.Assets", "at", Seq(classOf[String], classOf[String]),"GET", """ Map static resources from the /public folder to the /assets URL path""", Routes.prefix + """assets/$file<.+>"""))
    }
 }
         
 
-// @LINE:14
-case controllers_WebJarAssets_at6(params) => {
+// @LINE:15
+case controllers_WebJarAssets_at7(params) => {
    call(params.fromPath[String]("file", None)) { (file) =>
         invokeHandler(controllers.WebJarAssets.at(file), HandlerDef(this, "controllers.WebJarAssets", "at", Seq(classOf[String]),"GET", """""", Routes.prefix + """webjars/$file<.+>"""))
    }
 }
         
 
-// @LINE:17
-case controllers_Assets_at7(params) => {
+// @LINE:18
+case controllers_Assets_at8(params) => {
    call(Param[String]("path", Right("/public")), params.fromPath[String]("file", None)) { (path, file) =>
         invokeHandler(controllers.Assets.at(path, file), HandlerDef(this, "controllers.Assets", "at", Seq(classOf[String], classOf[String]),"GET", """ Server Resources for html/css/js """, Routes.prefix + """$file<.+>"""))
    }
 }
         
 
-// @LINE:18
-case controllers_Assets_at8(params) => {
+// @LINE:19
+case controllers_Assets_at9(params) => {
    call(Param[String]("path", Right("/public/html")), params.fromPath[String]("file", None)) { (path, file) =>
         invokeHandler(controllers.Assets.at(path, file), HandlerDef(this, "controllers.Assets", "at", Seq(classOf[String], classOf[String]),"GET", """""", Routes.prefix + """html/$file<.+>"""))
    }
 }
         
 
-// @LINE:19
-case controllers_Assets_at9(params) => {
+// @LINE:20
+case controllers_Assets_at10(params) => {
    call(Param[String]("path", Right("/public/js")), params.fromPath[String]("file", None)) { (path, file) =>
         invokeHandler(controllers.Assets.at(path, file), HandlerDef(this, "controllers.Assets", "at", Seq(classOf[String], classOf[String]),"GET", """""", Routes.prefix + """js/$file<.+>"""))
    }
 }
         
 
-// @LINE:20
-case controllers_Assets_at10(params) => {
+// @LINE:21
+case controllers_Assets_at11(params) => {
    call(Param[String]("path", Right("/public/css")), params.fromPath[String]("file", None)) { (path, file) =>
         invokeHandler(controllers.Assets.at(path, file), HandlerDef(this, "controllers.Assets", "at", Seq(classOf[String], classOf[String]),"GET", """""", Routes.prefix + """css/$file<.+>"""))
    }

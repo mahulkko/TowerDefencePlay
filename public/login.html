@@ -1,0 +1,101 @@
+<!-- Login -->
+
+
+<!-- CSS -->
+<style type="text/css">
+<!-- 
+
+	h1, h2 {
+		color: white;
+		text-align: center;
+		margin-bottom:20px;
+	}
+	
+	.field {
+		margin-bottom: 3px;
+	}
+	
+	#loginfield {
+		position: relative;
+		height: 300px;
+		width: 500px;
+		background-color: white;
+		margin-left: auto;
+		margin-right: auto;
+		padding: 20px;
+		text-align: center;
+		
+		-webkit-box-shadow: 6px 6px 6px 0px rgba(0,0,0,1);
+		-moz-box-shadow: 6px 6px 6px 0px rgba(0,0,0,1);
+		box-shadow: 6px 6px 6px 0px rgba(0,0,0,1);
+		
+		opacity: 0.9;
+    	filter: alpha(opacity=90); /* For IE8 and earlier */
+	}
+	.well {
+		background-image: url("images/background3.jpg");
+   		background-size: cover;
+   		height: 100%  
+	}
+-->
+</style>
+
+
+<!-- HTML -->
+<menu>TowerDefence</menu>
+
+<div class="well">
+
+	<h1>Welcome to TowerDefence</h1>
+
+	<h2>Please enter your informations</h2>
+	
+	<div id="loginfield">
+		 <form>
+		 	<div class="field">
+		 		Name of the Player:
+				<input type="text" ng-model="playername">
+		 	</div>
+			<br>
+			<div class="field">
+				Life of the Player:
+				<input type="number" ng-model="playerlife">
+			</div>
+			<br>
+			<div class="field">
+				Money of the Player:
+				<input type="number" ng-model="playermoney">
+			</div>
+			<br>
+			
+			<br>
+			
+			<div class="field">
+				Size of Playingfield:
+				<div class="btn-group" role="group" aria-label="...">
+					<button ng-click='playingfieldsize = 5' type="button" class="btn btn-default">5x5</button>
+				    <button ng-click='playingfieldsize = 8' type="button" class="btn btn-default">8x8</button>
+					<button ng-click='playingfieldsize = 10' type="button" class="btn btn-default">10x10</button>
+				</div>	
+			</div>
+			
+			<br>
+			<div class="field">
+				<button ng-click='sendLogginInformation()' id="loggin" type="button" class="btn btn-primary" >Loggin</button>
+			</div>
+		</form> 
+	</div>
+		
+</div>
+
+<hr size="10">
+
+<h1>Debug Ausgaben</h1>
+
+<h4>Playername:</h4>
+<p>{{playername}}</p>
+
+<h4>Playermone:</h4>
+<p>{{playermoney}}</p>
+
+

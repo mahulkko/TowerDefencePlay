@@ -57,4 +57,17 @@ public class WebController extends Controller {
 		return ok(newGameContext);
     }
     
+    
+    public static Result upgradeTower(int x, int y) {
+    	String newGameContext = "NULL";
+    	String currentGameContext = request().body().asJson().toString();
+
+    	try {
+    		newGameContext = gameController.upgradeTower(currentGameContext, x, y).toString();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		return ok(newGameContext);
+    }
+    
 }

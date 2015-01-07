@@ -9,14 +9,18 @@ var towerdefenceApp = angular.module('towerdefenceApp', ['ngRoute']);
 towerdefenceApp.config( function($routeProvider) {
   $routeProvider.
     when('/', {
-      templateUrl: '/game.html',
-      controller: 'GameContextCtrl'
+    	templateUrl: '/login.html',
+        controller: 'LoginCtrl'
     }).
+    when('/game', {
+    	templateUrl: '/game.html',
+        controller: 'GameContextCtrl'
+      }).
     when('/test', {
         templateUrl: '/html/test.html',
         controller: 'GameContextCtrl'
       }).
     otherwise({
-      redirectTo: '/'
+      redirectTo: '/game'
     });
 });

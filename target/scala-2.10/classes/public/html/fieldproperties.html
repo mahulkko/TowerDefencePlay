@@ -13,9 +13,6 @@
 		box-shadow: 6px 6px 6px 0px rgba(0,0,0,1);
 	}
 	
-	#label {
-   		margin-top: 5px;
-	}
 -->
 </style>
 
@@ -32,4 +29,8 @@
 			{{key}} : {{value}}
 		</li>
 	</ul>
+	<div float="right" ng-if='fieldType == "tower"'>
+		<button ng-click="upgradeTower()" id="updateTower" type="button" class="btn btn-default" >Upgrade Tower</button>
+	</div>
+	
 </div>

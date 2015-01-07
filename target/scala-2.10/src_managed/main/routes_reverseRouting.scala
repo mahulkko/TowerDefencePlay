@@ -1,6 +1,6 @@
-// @SOURCE:E:/Martin/Studium/Play/projects/TowerDefence-play/conf/routes
-// @HASH:0f117c249d07fa915ee2355e975e166b8a0c22ea
-// @DATE:Mon Jan 05 10:29:11 CET 2015
+// @SOURCE:/home/chris/Play/projects/TowerDefencePlay/conf/routes
+// @HASH:b2aa9a6f57f7780dd87c6fd5f99f3946005895d9
+// @DATE:Mon Jan 05 17:39:46 CET 2015
 
 import Routes.{prefix => _prefix, defaultPrefix => _defaultPrefix}
 import play.core._
@@ -13,12 +13,13 @@ import play.libs.F
 import Router.queryString
 
 
+// @LINE:21
 // @LINE:20
 // @LINE:19
 // @LINE:18
-// @LINE:17
+// @LINE:15
 // @LINE:14
-// @LINE:13
+// @LINE:11
 // @LINE:10
 // @LINE:9
 // @LINE:8
@@ -26,12 +27,25 @@ import Router.queryString
 // @LINE:5
 package controllers {
 
+// @LINE:11
 // @LINE:10
 // @LINE:9
 // @LINE:8
 // @LINE:5
 class ReverseWebController {
     
+
+// @LINE:8
+def updateGameContext(): Call = {
+   Call("POST", _prefix + { _defaultPrefix } + "update")
+}
+                                                
+
+// @LINE:11
+def upgradeTower(x:Integer, y:Integer): Call = {
+   Call("POST", _prefix + { _defaultPrefix } + "upgradetower/" + implicitly[PathBindable[Integer]].unbind("x", x) + "/" + implicitly[PathBindable[Integer]].unbind("y", y))
+}
+                                                
 
 // @LINE:10
 def sendMob(): Call = {
@@ -45,12 +59,6 @@ def setTower(x:Integer, y:Integer): Call = {
 }
                                                 
 
-// @LINE:8
-def updateGameContext(): Call = {
-   Call("POST", _prefix + { _defaultPrefix } + "update")
-}
-                                                
-
 // @LINE:5
 def index(): Call = {
    Call("GET", _prefix)
@@ -60,11 +68,11 @@ def index(): Call = {
 }
                           
 
-// @LINE:14
+// @LINE:15
 class ReverseWebJarAssets {
     
 
-// @LINE:14
+// @LINE:15
 def at(file:String): Call = {
    Call("GET", _prefix + { _defaultPrefix } + "webjars/" + implicitly[PathBindable[String]].unbind("file", file))
 }
@@ -73,39 +81,39 @@ def at(file:String): Call = {
 }
                           
 
+// @LINE:21
 // @LINE:20
 // @LINE:19
 // @LINE:18
-// @LINE:17
-// @LINE:13
+// @LINE:14
 // @LINE:6
 class ReverseAssets {
     
 
+// @LINE:21
 // @LINE:20
 // @LINE:19
 // @LINE:18
-// @LINE:17
-// @LINE:13
+// @LINE:14
 // @LINE:6
 def at(path:String, file:String): Call = {
    (path: @unchecked, file: @unchecked) match {
 // @LINE:6
 case (path, file) if path == "/public/html" && file == "test.html" => Call("GET", _prefix + { _defaultPrefix } + "test")
                                                         
-// @LINE:13
+// @LINE:14
 case (path, file) if path == "/public" => Call("GET", _prefix + { _defaultPrefix } + "assets/" + implicitly[PathBindable[String]].unbind("file", file))
                                                         
-// @LINE:17
+// @LINE:18
 case (path, file) if path == "/public" => Call("GET", _prefix + { _defaultPrefix } + implicitly[PathBindable[String]].unbind("file", file))
                                                         
-// @LINE:18
+// @LINE:19
 case (path, file) if path == "/public/html" => Call("GET", _prefix + { _defaultPrefix } + "html/" + implicitly[PathBindable[String]].unbind("file", file))
                                                         
-// @LINE:19
+// @LINE:20
 case (path, file) if path == "/public/js" => Call("GET", _prefix + { _defaultPrefix } + "js/" + implicitly[PathBindable[String]].unbind("file", file))
                                                         
-// @LINE:20
+// @LINE:21
 case (path, file) if path == "/public/css" => Call("GET", _prefix + { _defaultPrefix } + "css/" + implicitly[PathBindable[String]].unbind("file", file))
                                                         
    }
@@ -118,12 +126,13 @@ case (path, file) if path == "/public/css" => Call("GET", _prefix + { _defaultPr
                   
 
 
+// @LINE:21
 // @LINE:20
 // @LINE:19
 // @LINE:18
-// @LINE:17
+// @LINE:15
 // @LINE:14
-// @LINE:13
+// @LINE:11
 // @LINE:10
 // @LINE:9
 // @LINE:8
@@ -131,12 +140,35 @@ case (path, file) if path == "/public/css" => Call("GET", _prefix + { _defaultPr
 // @LINE:5
 package controllers.javascript {
 
+// @LINE:11
 // @LINE:10
 // @LINE:9
 // @LINE:8
 // @LINE:5
 class ReverseWebController {
     
+
+// @LINE:8
+def updateGameContext : JavascriptReverseRoute = JavascriptReverseRoute(
+   "controllers.WebController.updateGameContext",
+   """
+      function() {
+      return _wA({method:"POST", url:"""" + _prefix + { _defaultPrefix } + """" + "update"})
+      }
+   """
+)
+                        
+
+// @LINE:11
+def upgradeTower : JavascriptReverseRoute = JavascriptReverseRoute(
+   "controllers.WebController.upgradeTower",
+   """
+      function(x,y) {
+      return _wA({method:"POST", url:"""" + _prefix + { _defaultPrefix } + """" + "upgradetower/" + (""" + implicitly[PathBindable[Integer]].javascriptUnbind + """)("x", x) + "/" + (""" + implicitly[PathBindable[Integer]].javascriptUnbind + """)("y", y)})
+      }
+   """
+)
+                        
 
 // @LINE:10
 def sendMob : JavascriptReverseRoute = JavascriptReverseRoute(
@@ -160,17 +192,6 @@ def setTower : JavascriptReverseRoute = JavascriptReverseRoute(
 )
                         
 
-// @LINE:8
-def updateGameContext : JavascriptReverseRoute = JavascriptReverseRoute(
-   "controllers.WebController.updateGameContext",
-   """
-      function() {
-      return _wA({method:"POST", url:"""" + _prefix + { _defaultPrefix } + """" + "update"})
-      }
-   """
-)
-                        
-
 // @LINE:5
 def index : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.WebController.index",
@@ -185,11 +206,11 @@ def index : JavascriptReverseRoute = JavascriptReverseRoute(
 }
               
 
-// @LINE:14
+// @LINE:15
 class ReverseWebJarAssets {
     
 
-// @LINE:14
+// @LINE:15
 def at : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.WebJarAssets.at",
    """
@@ -203,20 +224,20 @@ def at : JavascriptReverseRoute = JavascriptReverseRoute(
 }
               
 
+// @LINE:21
 // @LINE:20
 // @LINE:19
 // @LINE:18
-// @LINE:17
-// @LINE:13
+// @LINE:14
 // @LINE:6
 class ReverseAssets {
     
 
+// @LINE:21
 // @LINE:20
 // @LINE:19
 // @LINE:18
-// @LINE:17
-// @LINE:13
+// @LINE:14
 // @LINE:6
 def at : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.Assets.at",
@@ -251,12 +272,13 @@ def at : JavascriptReverseRoute = JavascriptReverseRoute(
         
 
 
+// @LINE:21
 // @LINE:20
 // @LINE:19
 // @LINE:18
-// @LINE:17
+// @LINE:15
 // @LINE:14
-// @LINE:13
+// @LINE:11
 // @LINE:10
 // @LINE:9
 // @LINE:8
@@ -265,12 +287,25 @@ def at : JavascriptReverseRoute = JavascriptReverseRoute(
 package controllers.ref {
 
 
+// @LINE:11
 // @LINE:10
 // @LINE:9
 // @LINE:8
 // @LINE:5
 class ReverseWebController {
     
+
+// @LINE:8
+def updateGameContext(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
+   controllers.WebController.updateGameContext(), HandlerDef(this, "controllers.WebController", "updateGameContext", Seq(), "POST", """""", _prefix + """update""")
+)
+                      
+
+// @LINE:11
+def upgradeTower(x:Integer, y:Integer): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
+   controllers.WebController.upgradeTower(x, y), HandlerDef(this, "controllers.WebController", "upgradeTower", Seq(classOf[Integer], classOf[Integer]), "POST", """""", _prefix + """upgradetower/$x<[^/]+>/$y<[^/]+>""")
+)
+                      
 
 // @LINE:10
 def sendMob(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
@@ -284,12 +319,6 @@ def setTower(x:Integer, y:Integer): play.api.mvc.HandlerRef[_] = new play.api.mv
 )
                       
 
-// @LINE:8
-def updateGameContext(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
-   controllers.WebController.updateGameContext(), HandlerDef(this, "controllers.WebController", "updateGameContext", Seq(), "POST", """""", _prefix + """update""")
-)
-                      
-
 // @LINE:5
 def index(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    controllers.WebController.index(), HandlerDef(this, "controllers.WebController", "index", Seq(), "GET", """""", _prefix + """""")
@@ -299,11 +328,11 @@ def index(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
 }
                           
 
-// @LINE:14
+// @LINE:15
 class ReverseWebJarAssets {
     
 
-// @LINE:14
+// @LINE:15
 def at(file:String): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    controllers.WebJarAssets.at(file), HandlerDef(this, "controllers.WebJarAssets", "at", Seq(classOf[String]), "GET", """""", _prefix + """webjars/$file<.+>""")
 )
@@ -312,11 +341,11 @@ def at(file:String): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
 }
                           
 
+// @LINE:21
 // @LINE:20
 // @LINE:19
 // @LINE:18
-// @LINE:17
-// @LINE:13
+// @LINE:14
 // @LINE:6
 class ReverseAssets {
     
