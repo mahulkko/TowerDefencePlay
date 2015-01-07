@@ -34,6 +34,7 @@ Seq[Any](format.raw/*1.1*/("""<html ng-app="towerdefenceApp">
     <link rel='stylesheet' type='text/css' href='/css/bootstrap.css'>
     
     <script type="text/javascript" src="/js/jquery/jquery.js"></script>
+    <script type="text/javascript" src="/js/bootstrap/bootstrap.js"></script>
     <script type="text/javascript" src="/js/angular/angular.js"></script>
     <script type="text/javascript" src="/js/angular/angular-route.js"></script>
     
@@ -58,9 +59,9 @@ Seq[Any](format.raw/*1.1*/("""<html ng-app="towerdefenceApp">
 }
                 /*
                     -- GENERATED --
-                    DATE: Mon Jan 05 12:45:25 CET 2015
-                    SOURCE: /home/chris/Play/projects/TowerDefencePlay/app/views/index.scala.html
-                    HASH: 47af9326c0985de5cd0a42f598000792fd79db9c
+                    DATE: Wed Jan 07 14:27:41 CET 2015
+                    SOURCE: C:/Users/Chris/Play/TowerDefencePlay/app/views/index.scala.html
+                    HASH: 8d8f2070f875505d6a3446ccb365f0edfb9155fc
                     MATRIX: 855->0
                     LINES: 29->1
                     -- GENERATED --

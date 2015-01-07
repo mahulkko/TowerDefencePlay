@@ -1,9 +1,9 @@
 /**
  * Controller that handle the logic of the playing Game LoginCtrl
  */
-towerdefenceApp.controller('GameContextCtrl', function ($scope, $http, $routeParams, $timeout, gameContextFactory){
+towerdefenceApp.controller('GameContextCtrl', function ($rootScope, $scope, $http, $routeParams, $timeout, gameContextFactory){
 	
-	$scope.message = "Debug Messages";
+	$scope.message = "DebugMessage";
 	$scope.uiState = "setTower";
 	
 	var actionHappen = false;
@@ -27,12 +27,11 @@ towerdefenceApp.controller('GameContextCtrl', function ($scope, $http, $routePar
 	 * Click on a spezific Field on the Playingfield 
 	 */
 	$scope.clickOnField = function(columID, rowID, fieldContent) {
-		
+		$scope.position.x = columID;
+		$scope.position.y = rowID;
 		if($scope.uiState == "setTower") {
 			setTowerToPosition(columID, rowID);
 		} else {
-			$scope.position.x = columID;
-			$scope.position.y = rowID;
 			showFieldInformation(fieldContent);
 		}
 	};
@@ -54,12 +53,13 @@ towerdefenceApp.controller('GameContextCtrl', function ($scope, $http, $routePar
 	 * Pause or restart Game
 	 */
 	$scope.pause = function(){
-		  if(pause) {
-			  $scope.intervalFunction();
-		  } else {
-			  $timeout.cancel(updateTimer);
-		  }
-		  pause = !pause;
+		$scope.message = "Pause Game";
+		if(pause) {
+			$scope.intervalFunction();
+		} else {
+			$timeout.cancel(updateTimer);
+		}
+		pause = !pause;
 	 };
 	 
 	 /**
@@ -70,8 +70,7 @@ towerdefenceApp.controller('GameContextCtrl', function ($scope, $http, $routePar
 		actionURL = '/upgradetower/' + $scope.position.x + '/' + $scope.position.y;
 		$scope.message = actionURL;
 		actionHappen = true;
-		var fieldContent = getFieldContentByPosition($scope.position.x, $scope.position.y);
-		showFieldInformation(fieldContent);
+		updateInfoField();
 	 }
 	
 	// ------------------------------- Fillter Mehtod ------------------------------------------
@@ -114,7 +113,6 @@ towerdefenceApp.controller('GameContextCtrl', function ($scope, $http, $routePar
 		$scope.message = "Show Field Infomations: " + fieldContent;
 		
 		$scope.fieldType = compareFieldKeyString(fieldContent);
-	
 		if($scope.fieldType == "mob") {
 			$scope.message = fieldContent.mobList[0];
 			$scope.fieldProperties = fieldContent.mobList[0];
@@ -122,6 +120,14 @@ towerdefenceApp.controller('GameContextCtrl', function ($scope, $http, $routePar
 			$scope.message = fieldContent[$scope.fieldType];
 			$scope.fieldProperties = fieldContent[$scope.fieldType];
 		}
+	}
+	
+	/**
+	 * Update the Info Field after each update
+	 */
+	function updateInfoField() {
+		var fieldContent = getFieldContentByPosition($scope.position.x, $scope.position.y);
+		showFieldInformation(fieldContent);
 	}
 	
 	/**
@@ -167,27 +173,49 @@ towerdefenceApp.controller('GameContextCtrl', function ($scope, $http, $routePar
 	  
 	// ------------------------------- Post/Update Methods ------------------------------------------
 	  
-	 /**
-	 * Post Function that send the current GameContex and get a new one
-	 */
-	 function updateFunction(url) {
-		 if(!stop) {
+	/**
+	* Post Function that send the current GameContex and get a new one
+	*/
+	function updateFunction(url) {
+		if(!stop) {
+			if(actionHappen) {
+				url = actionURL;
+				actionHappen = false;
+			}
 			 
-			 if(actionHappen) {
-				 url = actionURL;
-				 actionHappen = false;
-			 }
-			 
-			 var response = $http.post(url, $scope.gameContext);
-				response.success(function(dataFromServer, status, headers, config) {
-					$scope.gameContext = dataFromServer;
-					checkIfGameOver($scope.gameContext);
-			   });
-			    response.error(function(data, status, headers, config) {
-			    	alert("Submitting GameContext failed!");
-			   })
-		 }
+			var response = $http.post(url, $scope.gameContext);
+			response.success(function(dataFromServer, status, headers, config) {
+				$scope.gameContext = dataFromServer;
+				checkIfGameOver($scope.gameContext);
+				updateInfoField();
+			});
+			response.error(function(data, status, headers, config) {
+				alert("Submitting GameContext failed!");
+			})
+		}
 	};
+	
+	$scope.loadNewGame = function() {
+		var newGameURL = '/startnewgame/' 
+			+ $rootScope.playername + '/'
+			+ $rootScope.playerlife + '/'
+			+ $rootScope.playermoney + '/'
+			+ $rootScope.playeremail + '/'
+			+ $rootScope.playingfieldsize + '/'
+			+ $rootScope.playingfieldsize;
+		
+		$scope.message = newGameURL;
+		
+		var response = $http.post(newGameURL, $scope.gameContext);
+		response.success(function(dataFromServer, status, headers, config) {
+			$scope.gameContext = dataFromServer;
+			alert($rootScope.playername + ": Click OK to start the game");
+		});
+		response.error(function(data, status, headers, config) {
+			alert("Can't create new game. Sorry !");
+		})
+	};
+	
 	
 	/**
 	 * Timer that calls the update Function every Second
@@ -202,6 +230,7 @@ towerdefenceApp.controller('GameContextCtrl', function ($scope, $http, $routePar
 	  /**
 	   * Starts the update Intervall Function
 	   */
+	  $scope.loadNewGame();
 	  $scope.intervalFunction();
 	  
 	  // ----------------------------------- Close Methode ----------------------------------------
@@ -215,27 +244,30 @@ towerdefenceApp.controller('GameContextCtrl', function ($scope, $http, $routePar
 	  
 	  $scope.$on('$destroy', function(){
 		  $timeout.cancel(updateTimer);
-		  alert("Stop Controller");
 	  });
 });
+
+
+
 
 /**
  * Controller that handle the logic of the playing Game
  */
-towerdefenceApp.controller('LoginCtrl', function ($scope, $http, $routeParams) {
+towerdefenceApp.controller('LoginCtrl', function ($rootScope, $scope, $http, $routeParams, $location) {
 	
-	$scope.playername = "Player";
-	$scope.playerlife = 10;
-	$scope.playermoney = 1000;
-	$scope.playingfieldsize = 5;
+	$scope.clickOnLoggin = function() {	
+		copyLogginDataToGlobal();
+		// TODO Check SOCIAL LOGGING
+	}
 	
-	$scope.sendLogginInformation = function() {
-		alert("Loggin Infos: " + 
-				$scope.playername + "\n" +
-				$scope.playerlife + "\n" +
-				$scope.playermoney + "\n" +
-				$scope.playingfieldsize
-		);
+	
+	function copyLogginDataToGlobal() {
+		$rootScope.playername = $scope.playername;
+		$rootScope.playerlife = $scope.playerlife;
+		$rootScope.playermoney = $scope.playermoney;
+		$rootScope.playeremail = $scope.playeremail;
+		$rootScope.playingfieldsize = $scope.playingfieldsize;
+		$location.path("/game");
 	}
 	
 });

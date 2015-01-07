@@ -57,17 +57,23 @@
 				<input type="text" ng-model="playername">
 		 	</div>
 			<br>
+			
 			<div class="field">
 				Life of the Player:
 				<input type="number" ng-model="playerlife">
 			</div>
 			<br>
+			
 			<div class="field">
 				Money of the Player:
 				<input type="number" ng-model="playermoney">
 			</div>
 			<br>
 			
+			<div class="field">
+		 		Email of the Player:
+				<input type="text" ng-model="playeremail">
+		 	</div>
 			<br>
 			
 			<div class="field">
@@ -81,21 +87,9 @@
 			
 			<br>
 			<div class="field">
-				<button ng-click='sendLogginInformation()' id="loggin" type="button" class="btn btn-primary" >Loggin</button>
+				<button ng-click='clickOnLoggin()' id="loggin" type="button" class="btn btn-primary" >Loggin</button>
 			</div>
 		</form> 
 	</div>
 		
 </div>
-
-<hr size="10">
-
-<h1>Debug Ausgaben</h1>
-
-<h4>Playername:</h4>
-<p>{{playername}}</p>
-
-<h4>Playermone:</h4>
-<p>{{playermoney}}</p>
-
-

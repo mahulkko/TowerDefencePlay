@@ -16,19 +16,22 @@ public class WebController extends Controller {
     	return ok(views.html.index.render());
     }
     
+    public static Result startNewGame(String name, int life, int money, String email, int sizeX, int sizeY) {
+    	String newGameContext = "NULL";
+    	String currentGameContext = request().body().asJson().toString();
+    	newGameContext = gameController.createNewGame(name, life, money, email, sizeX, sizeY).toString();
+		return ok(newGameContext);
+    }
+    
+    
     public static Result updateGameContext() {
     	String newGameContext = "NULL";
     	String currentGameContext = request().body().asJson().toString();
-    	
-    	if(currentGameContext.length() < 3) {
-    		newGameContext = gameController.createNewGame("Master", 1, 9999, 10, 10).toString();
-    	} else {
-    		try {
-        		newGameContext = gameController.updateGameContext(currentGameContext).toString();
-    		} catch (IOException e) {
-    			e.printStackTrace();
-    		}
-    	}
+		try {
+    		newGameContext = gameController.updateGameContext(currentGameContext).toString();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
     	
 		return ok(newGameContext);
     }
@@ -36,24 +39,24 @@ public class WebController extends Controller {
     public static Result setTower(int x, int y) {
     	String newGameContext = "NULL";
     	String currentGameContext = request().body().asJson().toString();
-    	
     	try {
     		newGameContext = gameController.setTowerToPostion(currentGameContext, x, y).toString();
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
+    	
 		return ok(newGameContext);
     }
     
     public static Result sendMob() {
     	String newGameContext = "NULL";
     	String currentGameContext = request().body().asJson().toString();
-
     	try {
     		newGameContext = gameController.sendNewMobFromStart(currentGameContext).toString();
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
+    	
 		return ok(newGameContext);
     }
     
@@ -61,12 +64,12 @@ public class WebController extends Controller {
     public static Result upgradeTower(int x, int y) {
     	String newGameContext = "NULL";
     	String currentGameContext = request().body().asJson().toString();
-
     	try {
     		newGameContext = gameController.upgradeTower(currentGameContext, x, y).toString();
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
+    	
 		return ok(newGameContext);
     }
     
