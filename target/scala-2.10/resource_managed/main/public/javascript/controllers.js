@@ -260,7 +260,6 @@ towerdefenceApp.controller('LoginCtrl', function ($rootScope, $scope, $http, $ro
 		// TODO Check SOCIAL LOGGING
 	}
 	
-	
 	function copyLogginDataToGlobal() {
 		$rootScope.playername = $scope.playername;
 		$rootScope.playerlife = $scope.playerlife;
