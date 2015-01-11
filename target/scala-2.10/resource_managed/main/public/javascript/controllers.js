@@ -1,7 +1,7 @@
 /**
  * Controller that handle the logic of the playing Game LoginCtrl
  */
-towerdefenceApp.controller('GameContextCtrl', function ($rootScope, $scope, $http, $routeParams, $timeout, gameContextFactory){
+towerdefenceApp.controller('GameContextCtrl', function ($rootScope, $scope, $http, $routeParams, $timeout, $location, gameContextFactory){
 	
 	$scope.message = "DebugMessage";
 	$scope.uiState = "setTower";
@@ -12,7 +12,6 @@ towerdefenceApp.controller('GameContextCtrl', function ($rootScope, $scope, $htt
 	var updateTime = 500;
 	var updateTimer;
 	var pause = false;
-	var stop = false;
 	
 	$scope.fieldType;
 	$scope.fieldProperties;
@@ -174,81 +173,83 @@ towerdefenceApp.controller('GameContextCtrl', function ($rootScope, $scope, $htt
 	// ------------------------------- Post/Update Methods ------------------------------------------
 	  
 	/**
-	* Post Function that send the current GameContex and get a new one
+	* Update Function that send the current GameContex and get a new one
 	*/
 	function updateFunction(url) {
-		if(!stop) {
-			if(actionHappen) {
-				url = actionURL;
-				actionHappen = false;
-			}
-			 
-			var response = $http.post(url, $scope.gameContext);
-			response.success(function(dataFromServer, status, headers, config) {
-				$scope.gameContext = dataFromServer;
-				checkIfGameOver($scope.gameContext);
-				updateInfoField();
-			});
-			response.error(function(data, status, headers, config) {
-				alert("Submitting GameContext failed!");
-			})
+		if(actionHappen) {
+			url = actionURL;
+			actionHappen = false;
 		}
-	};
-	
-	$scope.loadNewGame = function() {
-		var newGameURL = '/startnewgame/' 
-			+ $rootScope.playername + '/'
-			+ $rootScope.playerlife + '/'
-			+ $rootScope.playermoney + '/'
-			+ $rootScope.playeremail + '/'
-			+ $rootScope.playingfieldsize + '/'
-			+ $rootScope.playingfieldsize;
-		
-		$scope.message = newGameURL;
-		
-		var response = $http.post(newGameURL, $scope.gameContext);
+		 
+		var response = $http.post(url, $scope.gameContext);
 		response.success(function(dataFromServer, status, headers, config) {
 			$scope.gameContext = dataFromServer;
-			alert($rootScope.playername + ": Click OK to start the game");
+			checkIfGameOver($scope.gameContext);
+			updateInfoField();
 		});
 		response.error(function(data, status, headers, config) {
-			alert("Can't create new game. Sorry !");
+			$scope.message = "Cant connect to Server !!";
 		})
+	};
+	
+	$scope.startNewGame = function() {
+		if($rootScope.login) {
+			var newGameURL = '/startnewgame/' 
+				+ $rootScope.playername + '/'
+				+ $rootScope.playerlife + '/'
+				+ $rootScope.playermoney + '/'
+				+ $rootScope.playeremail + '/'
+				+ $rootScope.playingfieldsize + '/'
+				+ $rootScope.playingfieldsize;
+			
+			$scope.message = newGameURL;
+			
+			var response = $http.post(newGameURL, $scope.gameContext);
+			response.success(function(dataFromServer, status, headers, config) {
+				$scope.gameContext = dataFromServer;
+				alert($rootScope.playername + ": Click OK to start the game");
+				$scope.intervalFunction();
+			});
+			response.error(function(data, status, headers, config) {
+				alert("Can't create new game. Sorry !");
+			})
+			
+		} else {
+			alert("You need to Login");
+			$location.path("/");
+		}
 	};
 	
 	
 	/**
 	 * Timer that calls the update Function every Second
 	 */
-	  $scope.intervalFunction = function(){
-	    updateTimer = $timeout(function() { 
-	    	updateFunction('/update');
-	    	$scope.intervalFunction();
-	    }, updateTime)
-	  };
-	  
-	  /**
-	   * Starts the update Intervall Function
-	   */
-	  $scope.loadNewGame();
-	  $scope.intervalFunction();
-	  
-	  // ----------------------------------- Close Methode ----------------------------------------
-	  
-	  function checkIfGameOver(gameContext) {
-		  if(gameContext.player.life <= 0) {
-			  alert("Game Over !");
-			  stop = true;
-		  }
-	  }
-	  
-	  $scope.$on('$destroy', function(){
-		  $timeout.cancel(updateTimer);
-	  });
+    $scope.intervalFunction = function(){
+        updateTimer = $timeout(function() { 
+            updateFunction('/update');
+            $scope.intervalFunction();
+        }, updateTime)
+    };
+    
+    /**
+    * Starts new game and update intervall function
+    */
+    $scope.startNewGame();
+
+  
+// ----------------------------------- Close Methode ----------------------------------------
+
+    function checkIfGameOver(gameContext) {
+        if(gameContext.player.life <= 0) {
+            $timeout.cancel(updateTimer);
+            alert("Game Over !");
+        }
+    }
+
+    $scope.$on('$destroy', function() {
+        $timeout.cancel(updateTimer);
+    });
 });
-
-
-
 
 /**
  * Controller that handle the logic of the playing Game
@@ -258,6 +259,12 @@ towerdefenceApp.controller('LoginCtrl', function ($rootScope, $scope, $http, $ro
 	$scope.clickOnLoggin = function() {	
 		copyLogginDataToGlobal();
 		// TODO Check SOCIAL LOGGING
+		checkLogin();
+		$location.path("/game");
+	}
+	
+	function checkLogin() {
+		$rootScope.login = true;
 	}
 	
 	function copyLogginDataToGlobal() {
@@ -266,7 +273,5 @@ towerdefenceApp.controller('LoginCtrl', function ($rootScope, $scope, $http, $ro
 		$rootScope.playermoney = $scope.playermoney;
 		$rootScope.playeremail = $scope.playeremail;
 		$rootScope.playingfieldsize = $scope.playingfieldsize;
-		$location.path("/game");
 	}
-	
 });

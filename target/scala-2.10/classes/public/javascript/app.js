@@ -4,6 +4,7 @@
 var towerdefenceApp = angular.module('towerdefenceApp', ['ngRoute']);
 
 towerdefenceApp.run(function($rootScope) {
+	$rootScope.login = false;
 	$rootScope.playername = "Player";
 	$rootScope.playeremail = "player@123.de";
 	$rootScope.playerlife = 10;

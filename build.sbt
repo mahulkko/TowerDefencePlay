@@ -9,3 +9,4 @@ libraryDependencies ++= Seq(
   "org.webjars" % "bootstrap" % "2.3.1")
 
 playJavaSettings
+

@@ -7,7 +7,7 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies for towerdefence-play#towerdefence-play_2.10;1.0-SNAPSHOT [compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies towerdefence-play#towerdefence-play_2.10;1.0-SNAPSHOT->org.scala-lang#scala-library;2.10.3 [compile->default(compile)][0m
 [0m[[0minfo[0m] [0mResolving org.scala-lang#scala-library;2.10.3 ...[0m
-[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@78df3bb7[0m
+[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@195b3615[0m
 [0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: org.scala-lang#scala-library;2.10.3[0m
 [0m[[0mdebug[0m] [0m	local: revision in cache: org.scala-lang#scala-library;2.10.3[0m
 [0m[[0mdebug[0m] [0m	found org.scala-lang#scala-library;2.10.3 in sbt-chain[0m
@@ -8211,7 +8211,7 @@
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] log4j#log4j;1.2.15!log4j.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.aspectj#aspectjweaver;1.7.3!aspectjweaver.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] com.typesafe.trace#trace-sigar-libs;0.1.5!trace-sigar-libs.jar[0m
-[0m[[0mdebug[0m] [0m:: resolution report :: resolve 6415ms :: artifacts dl 300ms[0m
+[0m[[0mdebug[0m] [0m:: resolution report :: resolve 15704ms :: artifacts dl 286ms[0m
 [0m[[0mdebug[0m] [0m	report for towerdefence-play#towerdefence-play_2.10;1.0-SNAPSHOT compile produced in /home/chris/Play/projects/TowerDefencePlay/target/resolution-cache/reports/towerdefence-play-towerdefence-play_2.10-compile.xml[0m
 [0m[[0mdebug[0m] [0m	report for towerdefence-play#towerdefence-play_2.10;1.0-SNAPSHOT runtime produced in /home/chris/Play/projects/TowerDefencePlay/target/resolution-cache/reports/towerdefence-play-towerdefence-play_2.10-runtime.xml[0m
 [0m[[0mdebug[0m] [0m	report for towerdefence-play#towerdefence-play_2.10;1.0-SNAPSHOT test produced in /home/chris/Play/projects/TowerDefencePlay/target/resolution-cache/reports/towerdefence-play-towerdefence-play_2.10-test.xml[0m
@@ -8229,5 +8229,5 @@
 [0m[[0mdebug[0m] [0m	report for towerdefence-play#towerdefence-play_2.10;1.0-SNAPSHOT echo-trace-test produced in /home/chris/Play/projects/TowerDefencePlay/target/resolution-cache/reports/towerdefence-play-towerdefence-play_2.10-echo-trace-test.xml[0m
 [0m[[0mdebug[0m] [0m	report for towerdefence-play#towerdefence-play_2.10;1.0-SNAPSHOT echo-weave produced in /home/chris/Play/projects/TowerDefencePlay/target/resolution-cache/reports/towerdefence-play-towerdefence-play_2.10-echo-weave.xml[0m
 [0m[[0mdebug[0m] [0m	report for towerdefence-play#towerdefence-play_2.10;1.0-SNAPSHOT echo-sigar produced in /home/chris/Play/projects/TowerDefencePlay/target/resolution-cache/reports/towerdefence-play-towerdefence-play_2.10-echo-sigar.xml[0m
-[0m[[0mdebug[0m] [0m	resolve done (6415ms resolve - 300ms download)[0m
+[0m[[0mdebug[0m] [0m	resolve done (15704ms resolve - 286ms download)[0m
 [0m[[0minfo[0m] [0mDone updating.[0m
