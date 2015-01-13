@@ -1,6 +1,6 @@
-// @SOURCE:E:/Martin/Studium/Play/projects/TowerDefence-play/conf/routes
-// @HASH:d444c8f5a0efd29efc2964ab1369e9492bea5d50
-// @DATE:Tue Jan 13 14:21:43 CET 2015
+// @SOURCE:C:/Users/Chris/Play/TowerDefencePlay/conf/routes
+// @HASH:34750b8458139f1ca646df5a5c211b7c7d7c0ec9
+// @DATE:Tue Jan 13 16:34:04 CET 2015
 
 import Routes.{prefix => _prefix, defaultPrefix => _defaultPrefix}
 import play.core._
@@ -13,12 +13,13 @@ import play.libs.F
 import Router.queryString
 
 
+// @LINE:27
+// @LINE:26
+// @LINE:25
+// @LINE:24
 // @LINE:21
 // @LINE:20
-// @LINE:19
-// @LINE:18
-// @LINE:15
-// @LINE:14
+// @LINE:13
 // @LINE:11
 // @LINE:10
 // @LINE:9
@@ -28,6 +29,7 @@ import Router.queryString
 // @LINE:4
 package controllers {
 
+// @LINE:13
 // @LINE:11
 // @LINE:10
 // @LINE:9
@@ -40,6 +42,12 @@ class ReverseWebController {
 // @LINE:7
 def updateGameContext(): Call = {
    Call("POST", _prefix + { _defaultPrefix } + "update")
+}
+                                                
+
+// @LINE:13
+def protectedGame(): Call = {
+   Call("GET", _prefix + { _defaultPrefix } + "protected")
 }
                                                 
 
@@ -76,11 +84,11 @@ def index(): Call = {
 }
                           
 
-// @LINE:15
+// @LINE:21
 class ReverseWebJarAssets {
     
 
-// @LINE:15
+// @LINE:21
 def at(file:String): Call = {
    Call("GET", _prefix + { _defaultPrefix } + "webjars/" + implicitly[PathBindable[String]].unbind("file", file))
 }
@@ -89,39 +97,39 @@ def at(file:String): Call = {
 }
                           
 
-// @LINE:21
+// @LINE:27
+// @LINE:26
+// @LINE:25
+// @LINE:24
 // @LINE:20
-// @LINE:19
-// @LINE:18
-// @LINE:14
 // @LINE:5
 class ReverseAssets {
     
 
-// @LINE:21
+// @LINE:27
+// @LINE:26
+// @LINE:25
+// @LINE:24
 // @LINE:20
-// @LINE:19
-// @LINE:18
-// @LINE:14
 // @LINE:5
 def at(path:String, file:String): Call = {
    (path: @unchecked, file: @unchecked) match {
 // @LINE:5
 case (path, file) if path == "/public/html" && file == "rules.html" => Call("GET", _prefix + { _defaultPrefix } + "rules")
                                                         
-// @LINE:14
+// @LINE:20
 case (path, file) if path == "/public" => Call("GET", _prefix + { _defaultPrefix } + "assets/" + implicitly[PathBindable[String]].unbind("file", file))
                                                         
-// @LINE:18
+// @LINE:24
 case (path, file) if path == "/public" => Call("GET", _prefix + { _defaultPrefix } + implicitly[PathBindable[String]].unbind("file", file))
                                                         
-// @LINE:19
+// @LINE:25
 case (path, file) if path == "/public/html" => Call("GET", _prefix + { _defaultPrefix } + "html/" + implicitly[PathBindable[String]].unbind("file", file))
                                                         
-// @LINE:20
+// @LINE:26
 case (path, file) if path == "/public/js" => Call("GET", _prefix + { _defaultPrefix } + "js/" + implicitly[PathBindable[String]].unbind("file", file))
                                                         
-// @LINE:21
+// @LINE:27
 case (path, file) if path == "/public/css" => Call("GET", _prefix + { _defaultPrefix } + "css/" + implicitly[PathBindable[String]].unbind("file", file))
                                                         
    }
@@ -133,13 +141,50 @@ case (path, file) if path == "/public/css" => Call("GET", _prefix + { _defaultPr
 }
                   
 
-
-// @LINE:21
-// @LINE:20
-// @LINE:19
-// @LINE:18
+// @LINE:16
 // @LINE:15
 // @LINE:14
+package org.pac4j.play {
+
+// @LINE:16
+// @LINE:15
+// @LINE:14
+class ReverseCallbackController {
+    
+
+// @LINE:15
+// @LINE:14
+def callback(): Call = {
+   () match {
+// @LINE:14
+case () if true => Call("GET", _prefix + { _defaultPrefix } + "callback")
+                                                        
+// @LINE:15
+case () if true => Call("POST", _prefix + { _defaultPrefix } + "callback")
+                                                        
+   }
+}
+                                                
+
+// @LINE:16
+def logoutAndRedirect(): Call = {
+   Call("GET", _prefix + { _defaultPrefix } + "logout")
+}
+                                                
+    
+}
+                          
+}
+                  
+
+
+// @LINE:27
+// @LINE:26
+// @LINE:25
+// @LINE:24
+// @LINE:21
+// @LINE:20
+// @LINE:13
 // @LINE:11
 // @LINE:10
 // @LINE:9
@@ -149,6 +194,7 @@ case (path, file) if path == "/public/css" => Call("GET", _prefix + { _defaultPr
 // @LINE:4
 package controllers.javascript {
 
+// @LINE:13
 // @LINE:11
 // @LINE:10
 // @LINE:9
@@ -164,6 +210,17 @@ def updateGameContext : JavascriptReverseRoute = JavascriptReverseRoute(
    """
       function() {
       return _wA({method:"POST", url:"""" + _prefix + { _defaultPrefix } + """" + "update"})
+      }
+   """
+)
+                        
+
+// @LINE:13
+def protectedGame : JavascriptReverseRoute = JavascriptReverseRoute(
+   "controllers.WebController.protectedGame",
+   """
+      function() {
+      return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "protected"})
       }
    """
 )
@@ -227,11 +284,11 @@ def index : JavascriptReverseRoute = JavascriptReverseRoute(
 }
               
 
-// @LINE:15
+// @LINE:21
 class ReverseWebJarAssets {
     
 
-// @LINE:15
+// @LINE:21
 def at : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.WebJarAssets.at",
    """
@@ -245,20 +302,20 @@ def at : JavascriptReverseRoute = JavascriptReverseRoute(
 }
               
 
-// @LINE:21
+// @LINE:27
+// @LINE:26
+// @LINE:25
+// @LINE:24
 // @LINE:20
-// @LINE:19
-// @LINE:18
-// @LINE:14
 // @LINE:5
 class ReverseAssets {
     
 
-// @LINE:21
+// @LINE:27
+// @LINE:26
+// @LINE:25
+// @LINE:24
 // @LINE:20
-// @LINE:19
-// @LINE:18
-// @LINE:14
 // @LINE:5
 def at : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.Assets.at",
@@ -292,13 +349,58 @@ def at : JavascriptReverseRoute = JavascriptReverseRoute(
 }
         
 
-
-// @LINE:21
-// @LINE:20
-// @LINE:19
-// @LINE:18
+// @LINE:16
 // @LINE:15
 // @LINE:14
+package org.pac4j.play.javascript {
+
+// @LINE:16
+// @LINE:15
+// @LINE:14
+class ReverseCallbackController {
+    
+
+// @LINE:15
+// @LINE:14
+def callback : JavascriptReverseRoute = JavascriptReverseRoute(
+   "org.pac4j.play.CallbackController.callback",
+   """
+      function() {
+      if (true) {
+      return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "callback"})
+      }
+      if (true) {
+      return _wA({method:"POST", url:"""" + _prefix + { _defaultPrefix } + """" + "callback"})
+      }
+      }
+   """
+)
+                        
+
+// @LINE:16
+def logoutAndRedirect : JavascriptReverseRoute = JavascriptReverseRoute(
+   "org.pac4j.play.CallbackController.logoutAndRedirect",
+   """
+      function() {
+      return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "logout"})
+      }
+   """
+)
+                        
+    
+}
+              
+}
+        
+
+
+// @LINE:27
+// @LINE:26
+// @LINE:25
+// @LINE:24
+// @LINE:21
+// @LINE:20
+// @LINE:13
 // @LINE:11
 // @LINE:10
 // @LINE:9
@@ -309,6 +411,7 @@ def at : JavascriptReverseRoute = JavascriptReverseRoute(
 package controllers.ref {
 
 
+// @LINE:13
 // @LINE:11
 // @LINE:10
 // @LINE:9
@@ -321,6 +424,12 @@ class ReverseWebController {
 // @LINE:7
 def updateGameContext(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    controllers.WebController.updateGameContext(), HandlerDef(this, "controllers.WebController", "updateGameContext", Seq(), "POST", """""", _prefix + """update""")
+)
+                      
+
+// @LINE:13
+def protectedGame(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
+   controllers.WebController.protectedGame(), HandlerDef(this, "controllers.WebController", "protectedGame", Seq(), "GET", """""", _prefix + """protected""")
 )
                       
 
@@ -357,11 +466,11 @@ def index(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
 }
                           
 
-// @LINE:15
+// @LINE:21
 class ReverseWebJarAssets {
     
 
-// @LINE:15
+// @LINE:21
 def at(file:String): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    controllers.WebJarAssets.at(file), HandlerDef(this, "controllers.WebJarAssets", "at", Seq(classOf[String]), "GET", """""", _prefix + """webjars/$file<.+>""")
 )
@@ -370,11 +479,11 @@ def at(file:String): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
 }
                           
 
-// @LINE:21
+// @LINE:27
+// @LINE:26
+// @LINE:25
+// @LINE:24
 // @LINE:20
-// @LINE:19
-// @LINE:18
-// @LINE:14
 // @LINE:5
 class ReverseAssets {
     
@@ -382,6 +491,35 @@ class ReverseAssets {
 // @LINE:5
 def at(path:String, file:String): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    controllers.Assets.at(path, file), HandlerDef(this, "controllers.Assets", "at", Seq(classOf[String], classOf[String]), "GET", """""", _prefix + """rules""")
+)
+                      
+    
+}
+                          
+}
+        
+
+// @LINE:16
+// @LINE:15
+// @LINE:14
+package org.pac4j.play.ref {
+
+
+// @LINE:16
+// @LINE:15
+// @LINE:14
+class ReverseCallbackController {
+    
+
+// @LINE:14
+def callback(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
+   org.pac4j.play.CallbackController.callback(), HandlerDef(this, "org.pac4j.play.CallbackController", "callback", Seq(), "GET", """""", _prefix + """callback""")
+)
+                      
+
+// @LINE:16
+def logoutAndRedirect(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
+   org.pac4j.play.CallbackController.logoutAndRedirect(), HandlerDef(this, "org.pac4j.play.CallbackController", "logoutAndRedirect", Seq(), "GET", """""", _prefix + """logout""")
 )
                       
     

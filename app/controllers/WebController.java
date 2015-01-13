@@ -1,14 +1,16 @@
 package controllers;
 
-
 import java.io.IOException;
 
 import de.htwg.towerdefence.controller.IGameController;
 import de.htwg.towerdefence.controller.impl.GameController;
-import play.mvc.Controller;
 import play.mvc.Result;
 
-public class WebController extends Controller {
+import org.pac4j.core.profile.CommonProfile;
+import org.pac4j.play.java.JavaController;
+import org.pac4j.play.java.RequiresAuthentication;
+
+public class WebController extends JavaController {
 	
 	private static IGameController gameController = new GameController(false); 
 	
@@ -16,13 +18,24 @@ public class WebController extends Controller {
     	return ok(views.html.index.render());
     }
     
+    @RequiresAuthentication(clientName = "FacebookClient")
+    public static Result protectedGame() {
+    	System.out.println("Get Profil");
+    	final CommonProfile profile = getUserProfile();
+    	if(profile != null) {
+    		System.out.println("Profil != null");
+    		return ok(views.html.index.render());
+    	} else {
+    		System.out.println("Profil == null");
+    		return notFound();
+    	}
+    }
+    
     public static Result startNewGame(String name, int life, int money, String email, int sizeX, int sizeY) {
     	String newGameContext = "NULL";
-    	String currentGameContext = request().body().asJson().toString();
     	newGameContext = gameController.createNewGame(name, life, money, email, sizeX, sizeY).toString();
 		return ok(newGameContext);
     }
-    
     
     public static Result updateGameContext() {
     	String newGameContext = "NULL";

@@ -4,7 +4,7 @@
 		module="towerdefence-play_2.10"
 		revision="1.0-SNAPSHOT"
 		status="integration"
-		publication="20150113135359"
+		publication="20150113191929"
 	>
 		<description>
 		TowerDefence-play
@@ -42,6 +42,8 @@
 		<dependency org="com.typesafe.trace" name="trace-sigar-libs" rev="0.1.5" conf="echo-sigar->default(compile)"/>
 		<dependency org="org.webjars" name="webjars-play_2.10" rev="2.2.2" conf="compile->default(compile)"/>
 		<dependency org="org.webjars" name="bootstrap" rev="2.3.1" conf="compile->default(compile)"/>
+		<dependency org="org.pac4j" name="play-pac4j_java" rev="1.2.3-SNAPSHOT" conf="compile->default(compile)"/>
+		<dependency org="org.pac4j" name="pac4j-oauth" rev="1.7.0-SNAPSHOT" conf="compile->default(compile)"/>
 		<dependency org="com.typesafe.play" name="play_2.10" rev="2.2.3" conf="compile->default(compile)"/>
 		<dependency org="com.typesafe.play" name="play-test_2.10" rev="2.2.3" conf="test->default(compile)"/>
 		<dependency org="com.typesafe.play" name="play-docs_2.10" rev="2.2.3" conf="docs->default(compile)"/>

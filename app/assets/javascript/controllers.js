@@ -193,7 +193,7 @@ towerdefenceApp.controller('GameContextCtrl', function ($rootScope, $scope, $htt
 	};
 	
 	$scope.startNewGame = function() {
-		if($rootScope.login) {
+//		if($rootScope.login) {
 			var newGameURL = '/startnewgame/' 
 				+ $rootScope.playername + '/'
 				+ $rootScope.playerlife + '/'
@@ -214,10 +214,10 @@ towerdefenceApp.controller('GameContextCtrl', function ($rootScope, $scope, $htt
 				alert("Can't create new game. Sorry !");
 			})
 			
-		} else {
-			alert("You need to Login");
-			$location.path("/");
-		}
+//		} else {
+//			alert("You need to Login");
+//			$location.path("/");
+//		}
 	};
 	
 	
@@ -258,13 +258,29 @@ towerdefenceApp.controller('LoginCtrl', function ($rootScope, $scope, $http, $ro
 	
 	$scope.clickOnLoggin = function() {	
 		copyLogginDataToGlobal();
-		// TODO Check SOCIAL LOGGING
 		checkLogin();
 		$location.path("/game");
 	}
 	
+	$scope.clickOnGoogleLoggin = function() {	
+		copyLogginDataToGlobal();
+		checkSocialLogin();
+	//$location.path("/game");
+	}
+	
+	$scope.clickOnFacebookLoggin = function() {	
+		copyLogginDataToGlobal();
+		checkSocialLogin();
+	//$location.path("/game");
+	}
+	
 	function checkLogin() {
 		$rootScope.login = true;
+	}
+	
+	function checkSocialLogin() {
+		$rootScope.login = true;
+		window.open("/protected","_self");
 	}
 	
 	function copyLogginDataToGlobal() {

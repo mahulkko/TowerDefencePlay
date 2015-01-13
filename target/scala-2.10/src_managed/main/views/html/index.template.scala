@@ -59,8 +59,8 @@ Seq[Any](format.raw/*1.1*/("""<html ng-app="towerdefenceApp">
 }
                 /*
                     -- GENERATED --
-                    DATE: Tue Jan 13 13:53:08 CET 2015
-                    SOURCE: E:/Martin/Studium/Play/projects/TowerDefence-play/app/views/index.scala.html
+                    DATE: Tue Jan 13 15:12:33 CET 2015
+                    SOURCE: C:/Users/Chris/Play/TowerDefencePlay/app/views/index.scala.html
                     HASH: 8d8f2070f875505d6a3446ccb365f0edfb9155fc
                     MATRIX: 855->0
                     LINES: 29->1

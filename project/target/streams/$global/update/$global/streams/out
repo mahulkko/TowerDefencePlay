@@ -1,11 +1,11 @@
-[info] Updating {file:/E:/Martin/Studium/Play/projects/TowerDefence-play/project/}towerdefence-play-build...
-[debug] :: resolving dependencies :: default#towerdefence-play-build;0.1-SNAPSHOT
+[info] Updating {file:/C:/Users/Chris/Play/TowerDefencePlay/project/}towerdefenceplay-build...
+[debug] :: resolving dependencies :: default#towerdefenceplay-build;0.1-SNAPSHOT
 [debug] 	confs: [compile, runtime, test, provided, optional, compile-internal, runtime-internal, test-internal, plugin, sources, docs, pom, scala-tool]
 [debug] 	validate = true
 [debug] 	refresh = false
 [debug] resolving dependencies for configuration 'compile'
-[debug] == resolving dependencies for default#towerdefence-play-build;0.1-SNAPSHOT [compile]
-[debug] == resolving dependencies default#towerdefence-play-build;0.1-SNAPSHOT->com.typesafe.sbt#sbt-echo-play;0.1.1.3 [compile->default(compile)]
+[debug] == resolving dependencies for default#towerdefenceplay-build;0.1-SNAPSHOT [compile]
+[debug] == resolving dependencies default#towerdefenceplay-build;0.1-SNAPSHOT->com.typesafe.sbt#sbt-echo-play;0.1.1.3 [compile->default(compile)]
 [info] Resolving com.typesafe.sbt#sbt-echo-play;0.1.1.3 ...
 [debug] sbt-chain: Checking cache for: dependency: com.typesafe.sbt#sbt-echo-play;0.1.1.3 {compile=[default(compile)]}
 [debug] sbt-chain: module revision found in cache: com.typesafe.sbt#sbt-echo-play;0.1.1.3
@@ -515,7 +515,7 @@
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.2 {provided=[default(compile)]} => dependency: org.scala-lang#scala-library;2.10.3 {provided=[default(compile)]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.2 {provided=[default(compile)]} => dependency: org.scala-lang#scala-library;2.10.3 {provided=[default(compile)]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.10.3 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.10.3 {scala-tool=[default, optional(default)]}
-[debug] dependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@432da7 => sbt.ivyint.MergedDescriptors@6d3626
+[debug] dependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@27db50e8 => sbt.ivyint.MergedDescriptors@245c5715
 [info] Resolving org.apache.commons#commons-compress;1.4.1 ...
 [debug] sbt-chain: Checking cache for: dependency: org.apache.commons#commons-compress;1.4.1 {compile=[default(compile)]}
 [debug] sbt-chain: module revision found in cache: org.apache.commons#commons-compress;1.4.1
@@ -529,7 +529,7 @@
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.2 {provided=[default(compile)]} => dependency: org.scala-lang#scala-library;2.10.3 {provided=[default(compile)]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.2 {provided=[default(compile)]} => dependency: org.scala-lang#scala-library;2.10.3 {provided=[default(compile)]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.10.3 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.10.3 {scala-tool=[default, optional(default)]}
-[debug] dependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@432da7 => sbt.ivyint.MergedDescriptors@9068a2
+[debug] dependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@27db50e8 => sbt.ivyint.MergedDescriptors@2393c888
 [info] Resolving org.tukaani#xz;1.0 ...
 [debug] sbt-chain: Checking cache for: dependency: org.tukaani#xz;1.0 {compile=[compile(*), master(*)], runtime=[runtime(*)]}
 [debug] sbt-chain: module revision found in cache: org.tukaani#xz;1.0
@@ -623,16 +623,16 @@
 [debug] == resolving dependencies com.typesafe.play#sbt-plugin;2.2.3->org.specs2#specs2_2.10;2.1.1 [compile->master]
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.10.2 {optional=[compile(*), master(*)]} => dependency: org.scala-lang#scala-compiler;2.10.3 {optional=[compile(*), master(*)]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.10.2 {optional=[compile(*), master(*)]} => dependency: org.scala-lang#scala-compiler;2.10.3 {optional=[compile(*), master(*)]}
-[debug] == resolving dependencies default#towerdefence-play-build;0.1-SNAPSHOT->com.typesafe.sbteclipse#sbteclipse-plugin;2.3.0 [compile->default(compile)]
-[debug] == resolving dependencies default#towerdefence-play-build;0.1-SNAPSHOT->com.typesafe.sbteclipse#sbteclipse-plugin;2.4.0 [compile->default(compile)]
-[debug] == resolving dependencies default#towerdefence-play-build;0.1-SNAPSHOT->com.github.mpeltonen#sbt-idea;1.5.2 [compile->default(compile)]
+[debug] == resolving dependencies default#towerdefenceplay-build;0.1-SNAPSHOT->com.typesafe.sbteclipse#sbteclipse-plugin;2.3.0 [compile->default(compile)]
+[debug] == resolving dependencies default#towerdefenceplay-build;0.1-SNAPSHOT->com.typesafe.sbteclipse#sbteclipse-plugin;2.4.0 [compile->default(compile)]
+[debug] == resolving dependencies default#towerdefenceplay-build;0.1-SNAPSHOT->com.github.mpeltonen#sbt-idea;1.5.2 [compile->default(compile)]
 [info] Resolving com.github.mpeltonen#sbt-idea;1.5.2 ...
 [debug] sbt-chain: Checking cache for: dependency: com.github.mpeltonen#sbt-idea;1.5.2 {compile=[default(compile)]}
 [debug] sbt-chain: module revision found in cache: com.github.mpeltonen#sbt-idea;1.5.2
 [debug] 	typesafe-ivy-releases: revision in cache: com.github.mpeltonen#sbt-idea;1.5.2
 [debug] 	found com.github.mpeltonen#sbt-idea;1.5.2 in sbt-chain
-[debug] == resolving dependencies default#towerdefence-play-build;0.1-SNAPSHOT->com.github.mpeltonen#sbt-idea;1.5.2 [compile->runtime]
-[debug] == resolving dependencies default#towerdefence-play-build;0.1-SNAPSHOT->com.github.mpeltonen#sbt-idea;1.5.2 [compile->compile]
+[debug] == resolving dependencies default#towerdefenceplay-build;0.1-SNAPSHOT->com.github.mpeltonen#sbt-idea;1.5.2 [compile->runtime]
+[debug] == resolving dependencies default#towerdefenceplay-build;0.1-SNAPSHOT->com.github.mpeltonen#sbt-idea;1.5.2 [compile->compile]
 [debug] == resolving dependencies com.github.mpeltonen#sbt-idea;1.5.2->commons-io#commons-io;2.0.1 [compile->master(*)]
 [info] Resolving commons-io#commons-io;2.0.1 ...
 [debug] sbt-chain: Checking cache for: dependency: commons-io#commons-io;2.0.1 {compile=[compile(*), master(*)], runtime=[runtime(*)]}
@@ -644,13 +644,13 @@
 [debug] == resolving dependencies com.github.mpeltonen#sbt-idea;1.5.2->commons-io#commons-io;2.0.1 [compile->compile]
 [debug] == resolving dependencies com.github.mpeltonen#sbt-idea;1.5.2->commons-io#commons-io;2.0.1 [runtime->runtime(*)]
 [debug] == resolving dependencies com.github.mpeltonen#sbt-idea;1.5.2->commons-io#commons-io;2.0.1 [runtime->compile]
-[debug] == resolving dependencies default#towerdefence-play-build;0.1-SNAPSHOT->com.github.mpeltonen#sbt-idea;1.5.2 [compile->master]
-[debug] == resolving dependencies default#towerdefence-play-build;0.1-SNAPSHOT->com.typesafe.play#sbt-plugin;2.2.2 [compile->default(compile)]
-[debug] == resolving dependencies default#towerdefence-play-build;0.1-SNAPSHOT->com.typesafe.play#sbt-plugin;2.2.3 [compile->default(compile)]
+[debug] == resolving dependencies default#towerdefenceplay-build;0.1-SNAPSHOT->com.github.mpeltonen#sbt-idea;1.5.2 [compile->master]
+[debug] == resolving dependencies default#towerdefenceplay-build;0.1-SNAPSHOT->com.typesafe.play#sbt-plugin;2.2.2 [compile->default(compile)]
+[debug] == resolving dependencies default#towerdefenceplay-build;0.1-SNAPSHOT->com.typesafe.play#sbt-plugin;2.2.3 [compile->default(compile)]
 [debug] resolving dependencies for configuration 'runtime'
-[debug] == resolving dependencies for default#towerdefence-play-build;0.1-SNAPSHOT [runtime]
-[debug] == resolving dependencies for default#towerdefence-play-build;0.1-SNAPSHOT [compile]
-[debug] == resolving dependencies default#towerdefence-play-build;0.1-SNAPSHOT->com.typesafe.sbt#sbt-echo-play;0.1.1.3 [compile->default(compile)]
+[debug] == resolving dependencies for default#towerdefenceplay-build;0.1-SNAPSHOT [runtime]
+[debug] == resolving dependencies for default#towerdefenceplay-build;0.1-SNAPSHOT [compile]
+[debug] == resolving dependencies default#towerdefenceplay-build;0.1-SNAPSHOT->com.typesafe.sbt#sbt-echo-play;0.1.1.3 [compile->default(compile)]
 [debug] == resolving dependencies com.typesafe.sbt#sbt-echo-play;0.1.1.3->com.typesafe.sbt#sbt-echo;0.1.1.3 [compile->default(compile)]
 [debug] == resolving dependencies com.typesafe.sbt#sbt-echo;0.1.1.3->org.aspectj#aspectjtools;1.7.3 [compile->default(compile)]
 [debug] == resolving dependencies com.typesafe.sbt#sbt-echo;0.1.1.3->org.aspectj#aspectjtools;1.7.3 [compile->runtime]
@@ -987,9 +987,9 @@
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.2 {provided=[default(compile)]} => dependency: org.scala-lang#scala-library;2.10.3 {provided=[default(compile)]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.2 {provided=[default(compile)]} => dependency: org.scala-lang#scala-library;2.10.3 {provided=[default(compile)]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.10.3 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.10.3 {scala-tool=[default, optional(default)]}
-[debug] dependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@432da7 => sbt.ivyint.MergedDescriptors@19af4f7
+[debug] dependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@27db50e8 => sbt.ivyint.MergedDescriptors@6b052448
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.10.3 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.10.3 {scala-tool=[default, optional(default)]}
-[debug] dependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@432da7 => sbt.ivyint.MergedDescriptors@16e8d48
+[debug] dependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@27db50e8 => sbt.ivyint.MergedDescriptors@4f74aa19
 [debug] == resolving dependencies com.typesafe.sbt#sbt-native-packager;0.6.4->org.apache.commons#commons-compress;1.4.1 [compile->runtime]
 [debug] == resolving dependencies com.typesafe.sbt#sbt-native-packager;0.6.4->org.apache.commons#commons-compress;1.4.1 [compile->compile]
 [debug] == resolving dependencies org.apache.commons#commons-compress;1.4.1->org.tukaani#xz;1.0 [compile->master(*)]
@@ -998,9 +998,9 @@
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.2 {provided=[default(compile)]} => dependency: org.scala-lang#scala-library;2.10.3 {provided=[default(compile)]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.2 {provided=[default(compile)]} => dependency: org.scala-lang#scala-library;2.10.3 {provided=[default(compile)]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.10.3 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.10.3 {scala-tool=[default, optional(default)]}
-[debug] dependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@432da7 => sbt.ivyint.MergedDescriptors@862d4e
+[debug] dependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@27db50e8 => sbt.ivyint.MergedDescriptors@328bee87
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.10.3 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.10.3 {scala-tool=[default, optional(default)]}
-[debug] dependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@432da7 => sbt.ivyint.MergedDescriptors@595365
+[debug] dependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@27db50e8 => sbt.ivyint.MergedDescriptors@706ebbfa
 [debug] == resolving dependencies org.apache.commons#commons-compress;1.4.1->org.tukaani#xz;1.0 [compile->compile(*)]
 [debug] == resolving dependencies org.apache.commons#commons-compress;1.4.1->org.tukaani#xz;1.0 [runtime->runtime(*)]
 [debug] == resolving dependencies org.apache.commons#commons-compress;1.4.1->org.tukaani#xz;1.0 [runtime->compile]
@@ -1075,19 +1075,19 @@
 [debug] == resolving dependencies com.typesafe.play#sbt-plugin;2.2.3->org.specs2#specs2_2.10;2.1.1 [compile->master]
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.10.2 {optional=[compile(*), master(*)]} => dependency: org.scala-lang#scala-compiler;2.10.3 {optional=[compile(*), master(*)]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.10.2 {optional=[compile(*), master(*)]} => dependency: org.scala-lang#scala-compiler;2.10.3 {optional=[compile(*), master(*)]}
-[debug] == resolving dependencies default#towerdefence-play-build;0.1-SNAPSHOT->com.typesafe.sbteclipse#sbteclipse-plugin;2.3.0 [compile->default(compile)]
-[debug] == resolving dependencies default#towerdefence-play-build;0.1-SNAPSHOT->com.typesafe.sbteclipse#sbteclipse-plugin;2.4.0 [compile->default(compile)]
-[debug] == resolving dependencies default#towerdefence-play-build;0.1-SNAPSHOT->com.github.mpeltonen#sbt-idea;1.5.2 [compile->default(compile)]
-[debug] == resolving dependencies default#towerdefence-play-build;0.1-SNAPSHOT->com.github.mpeltonen#sbt-idea;1.5.2 [compile->runtime]
-[debug] == resolving dependencies default#towerdefence-play-build;0.1-SNAPSHOT->com.github.mpeltonen#sbt-idea;1.5.2 [compile->compile]
-[debug] == resolving dependencies default#towerdefence-play-build;0.1-SNAPSHOT->com.github.mpeltonen#sbt-idea;1.5.2 [compile->master]
-[debug] == resolving dependencies default#towerdefence-play-build;0.1-SNAPSHOT->com.typesafe.play#sbt-plugin;2.2.2 [compile->default(compile)]
-[debug] == resolving dependencies default#towerdefence-play-build;0.1-SNAPSHOT->com.typesafe.play#sbt-plugin;2.2.3 [compile->default(compile)]
+[debug] == resolving dependencies default#towerdefenceplay-build;0.1-SNAPSHOT->com.typesafe.sbteclipse#sbteclipse-plugin;2.3.0 [compile->default(compile)]
+[debug] == resolving dependencies default#towerdefenceplay-build;0.1-SNAPSHOT->com.typesafe.sbteclipse#sbteclipse-plugin;2.4.0 [compile->default(compile)]
+[debug] == resolving dependencies default#towerdefenceplay-build;0.1-SNAPSHOT->com.github.mpeltonen#sbt-idea;1.5.2 [compile->default(compile)]
+[debug] == resolving dependencies default#towerdefenceplay-build;0.1-SNAPSHOT->com.github.mpeltonen#sbt-idea;1.5.2 [compile->runtime]
+[debug] == resolving dependencies default#towerdefenceplay-build;0.1-SNAPSHOT->com.github.mpeltonen#sbt-idea;1.5.2 [compile->compile]
+[debug] == resolving dependencies default#towerdefenceplay-build;0.1-SNAPSHOT->com.github.mpeltonen#sbt-idea;1.5.2 [compile->master]
+[debug] == resolving dependencies default#towerdefenceplay-build;0.1-SNAPSHOT->com.typesafe.play#sbt-plugin;2.2.2 [compile->default(compile)]
+[debug] == resolving dependencies default#towerdefenceplay-build;0.1-SNAPSHOT->com.typesafe.play#sbt-plugin;2.2.3 [compile->default(compile)]
 [debug] resolving dependencies for configuration 'test'
-[debug] == resolving dependencies for default#towerdefence-play-build;0.1-SNAPSHOT [test]
-[debug] == resolving dependencies for default#towerdefence-play-build;0.1-SNAPSHOT [runtime]
-[debug] == resolving dependencies for default#towerdefence-play-build;0.1-SNAPSHOT [compile]
-[debug] == resolving dependencies default#towerdefence-play-build;0.1-SNAPSHOT->com.typesafe.sbt#sbt-echo-play;0.1.1.3 [compile->default(compile)]
+[debug] == resolving dependencies for default#towerdefenceplay-build;0.1-SNAPSHOT [test]
+[debug] == resolving dependencies for default#towerdefenceplay-build;0.1-SNAPSHOT [runtime]
+[debug] == resolving dependencies for default#towerdefenceplay-build;0.1-SNAPSHOT [compile]
+[debug] == resolving dependencies default#towerdefenceplay-build;0.1-SNAPSHOT->com.typesafe.sbt#sbt-echo-play;0.1.1.3 [compile->default(compile)]
 [debug] == resolving dependencies com.typesafe.sbt#sbt-echo-play;0.1.1.3->com.typesafe.sbt#sbt-echo;0.1.1.3 [compile->default(compile)]
 [debug] == resolving dependencies com.typesafe.sbt#sbt-echo;0.1.1.3->org.aspectj#aspectjtools;1.7.3 [compile->default(compile)]
 [debug] == resolving dependencies com.typesafe.sbt#sbt-echo;0.1.1.3->org.aspectj#aspectjtools;1.7.3 [compile->runtime]
@@ -1424,11 +1424,11 @@
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.2 {provided=[default(compile)]} => dependency: org.scala-lang#scala-library;2.10.3 {provided=[default(compile)]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.2 {provided=[default(compile)]} => dependency: org.scala-lang#scala-library;2.10.3 {provided=[default(compile)]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.10.3 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.10.3 {scala-tool=[default, optional(default)]}
-[debug] dependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@432da7 => sbt.ivyint.MergedDescriptors@15dbb59
+[debug] dependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@27db50e8 => sbt.ivyint.MergedDescriptors@81b7b02
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.10.3 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.10.3 {scala-tool=[default, optional(default)]}
-[debug] dependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@432da7 => sbt.ivyint.MergedDescriptors@31955
+[debug] dependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@27db50e8 => sbt.ivyint.MergedDescriptors@f672e01
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.10.3 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.10.3 {scala-tool=[default, optional(default)]}
-[debug] dependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@432da7 => sbt.ivyint.MergedDescriptors@6c9e8a
+[debug] dependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@27db50e8 => sbt.ivyint.MergedDescriptors@7b09aa9a
 [debug] == resolving dependencies com.typesafe.sbt#sbt-native-packager;0.6.4->org.apache.commons#commons-compress;1.4.1 [compile->runtime]
 [debug] == resolving dependencies com.typesafe.sbt#sbt-native-packager;0.6.4->org.apache.commons#commons-compress;1.4.1 [compile->compile]
 [debug] == resolving dependencies org.apache.commons#commons-compress;1.4.1->org.tukaani#xz;1.0 [compile->master(*)]
@@ -1437,11 +1437,11 @@
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.2 {provided=[default(compile)]} => dependency: org.scala-lang#scala-library;2.10.3 {provided=[default(compile)]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.2 {provided=[default(compile)]} => dependency: org.scala-lang#scala-library;2.10.3 {provided=[default(compile)]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.10.3 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.10.3 {scala-tool=[default, optional(default)]}
-[debug] dependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@432da7 => sbt.ivyint.MergedDescriptors@156367d
+[debug] dependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@27db50e8 => sbt.ivyint.MergedDescriptors@43b34377
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.10.3 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.10.3 {scala-tool=[default, optional(default)]}
-[debug] dependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@432da7 => sbt.ivyint.MergedDescriptors@14754f3
+[debug] dependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@27db50e8 => sbt.ivyint.MergedDescriptors@75127a26
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.10.3 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.10.3 {scala-tool=[default, optional(default)]}
-[debug] dependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@432da7 => sbt.ivyint.MergedDescriptors@17903df
+[debug] dependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@27db50e8 => sbt.ivyint.MergedDescriptors@43794364
 [debug] == resolving dependencies org.apache.commons#commons-compress;1.4.1->org.tukaani#xz;1.0 [compile->compile(*)]
 [debug] == resolving dependencies org.apache.commons#commons-compress;1.4.1->org.tukaani#xz;1.0 [runtime->runtime(*)]
 [debug] == resolving dependencies org.apache.commons#commons-compress;1.4.1->org.tukaani#xz;1.0 [runtime->compile]
@@ -1516,21 +1516,21 @@
 [debug] == resolving dependencies com.typesafe.play#sbt-plugin;2.2.3->org.specs2#specs2_2.10;2.1.1 [compile->master]
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.10.2 {optional=[compile(*), master(*)]} => dependency: org.scala-lang#scala-compiler;2.10.3 {optional=[compile(*), master(*)]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.10.2 {optional=[compile(*), master(*)]} => dependency: org.scala-lang#scala-compiler;2.10.3 {optional=[compile(*), master(*)]}
-[debug] == resolving dependencies default#towerdefence-play-build;0.1-SNAPSHOT->com.typesafe.sbteclipse#sbteclipse-plugin;2.3.0 [compile->default(compile)]
-[debug] == resolving dependencies default#towerdefence-play-build;0.1-SNAPSHOT->com.typesafe.sbteclipse#sbteclipse-plugin;2.4.0 [compile->default(compile)]
-[debug] == resolving dependencies default#towerdefence-play-build;0.1-SNAPSHOT->com.github.mpeltonen#sbt-idea;1.5.2 [compile->default(compile)]
-[debug] == resolving dependencies default#towerdefence-play-build;0.1-SNAPSHOT->com.github.mpeltonen#sbt-idea;1.5.2 [compile->runtime]
-[debug] == resolving dependencies default#towerdefence-play-build;0.1-SNAPSHOT->com.github.mpeltonen#sbt-idea;1.5.2 [compile->compile]
-[debug] == resolving dependencies default#towerdefence-play-build;0.1-SNAPSHOT->com.github.mpeltonen#sbt-idea;1.5.2 [compile->master]
-[debug] == resolving dependencies default#towerdefence-play-build;0.1-SNAPSHOT->com.typesafe.play#sbt-plugin;2.2.2 [compile->default(compile)]
-[debug] == resolving dependencies default#towerdefence-play-build;0.1-SNAPSHOT->com.typesafe.play#sbt-plugin;2.2.3 [compile->default(compile)]
+[debug] == resolving dependencies default#towerdefenceplay-build;0.1-SNAPSHOT->com.typesafe.sbteclipse#sbteclipse-plugin;2.3.0 [compile->default(compile)]
+[debug] == resolving dependencies default#towerdefenceplay-build;0.1-SNAPSHOT->com.typesafe.sbteclipse#sbteclipse-plugin;2.4.0 [compile->default(compile)]
+[debug] == resolving dependencies default#towerdefenceplay-build;0.1-SNAPSHOT->com.github.mpeltonen#sbt-idea;1.5.2 [compile->default(compile)]
+[debug] == resolving dependencies default#towerdefenceplay-build;0.1-SNAPSHOT->com.github.mpeltonen#sbt-idea;1.5.2 [compile->runtime]
+[debug] == resolving dependencies default#towerdefenceplay-build;0.1-SNAPSHOT->com.github.mpeltonen#sbt-idea;1.5.2 [compile->compile]
+[debug] == resolving dependencies default#towerdefenceplay-build;0.1-SNAPSHOT->com.github.mpeltonen#sbt-idea;1.5.2 [compile->master]
+[debug] == resolving dependencies default#towerdefenceplay-build;0.1-SNAPSHOT->com.typesafe.play#sbt-plugin;2.2.2 [compile->default(compile)]
+[debug] == resolving dependencies default#towerdefenceplay-build;0.1-SNAPSHOT->com.typesafe.play#sbt-plugin;2.2.3 [compile->default(compile)]
 [debug] resolving dependencies for configuration 'provided'
-[debug] == resolving dependencies for default#towerdefence-play-build;0.1-SNAPSHOT [provided]
-[debug] == resolving dependencies default#towerdefence-play-build;0.1-SNAPSHOT->org.scala-lang#scala-library;2.10.3 [provided->default(compile)]
-[debug] == resolving dependencies default#towerdefence-play-build;0.1-SNAPSHOT->org.scala-lang#scala-library;2.10.3 [provided->runtime]
-[debug] == resolving dependencies default#towerdefence-play-build;0.1-SNAPSHOT->org.scala-lang#scala-library;2.10.3 [provided->compile]
-[debug] == resolving dependencies default#towerdefence-play-build;0.1-SNAPSHOT->org.scala-lang#scala-library;2.10.3 [provided->master]
-[debug] == resolving dependencies default#towerdefence-play-build;0.1-SNAPSHOT->org.scala-sbt#sbt;0.13.2 [provided->default(compile)]
+[debug] == resolving dependencies for default#towerdefenceplay-build;0.1-SNAPSHOT [provided]
+[debug] == resolving dependencies default#towerdefenceplay-build;0.1-SNAPSHOT->org.scala-lang#scala-library;2.10.3 [provided->default(compile)]
+[debug] == resolving dependencies default#towerdefenceplay-build;0.1-SNAPSHOT->org.scala-lang#scala-library;2.10.3 [provided->runtime]
+[debug] == resolving dependencies default#towerdefenceplay-build;0.1-SNAPSHOT->org.scala-lang#scala-library;2.10.3 [provided->compile]
+[debug] == resolving dependencies default#towerdefenceplay-build;0.1-SNAPSHOT->org.scala-lang#scala-library;2.10.3 [provided->master]
+[debug] == resolving dependencies default#towerdefenceplay-build;0.1-SNAPSHOT->org.scala-sbt#sbt;0.13.2 [provided->default(compile)]
 [info] Resolving org.scala-sbt#sbt;0.13.2 ...
 [debug] sbt-chain: Checking cache for: dependency: org.scala-sbt#sbt;0.13.2 {provided=[default(compile)]}
 [debug] sbt-chain: module revision found in cache: org.scala-sbt#sbt;0.13.2
@@ -2044,11 +2044,11 @@
 [debug] == resolving dependencies org.scala-sbt#precompiled-2_9_3;0.13.2->org.scala-lang#scala-library;2.10.3 [compile->master]
 [debug] == resolving dependencies org.scala-sbt#precompiled-2_9_3;0.13.2->org.scala-sbt#interface;0.13.2 [compile->default(compile)]
 [debug] resolving dependencies for configuration 'optional'
-[debug] == resolving dependencies for default#towerdefence-play-build;0.1-SNAPSHOT [optional]
+[debug] == resolving dependencies for default#towerdefenceplay-build;0.1-SNAPSHOT [optional]
 [debug] resolving dependencies for configuration 'compile-internal'
-[debug] == resolving dependencies for default#towerdefence-play-build;0.1-SNAPSHOT [compile-internal]
-[debug] == resolving dependencies for default#towerdefence-play-build;0.1-SNAPSHOT [compile]
-[debug] == resolving dependencies default#towerdefence-play-build;0.1-SNAPSHOT->com.typesafe.sbt#sbt-echo-play;0.1.1.3 [compile->default(compile)]
+[debug] == resolving dependencies for default#towerdefenceplay-build;0.1-SNAPSHOT [compile-internal]
+[debug] == resolving dependencies for default#towerdefenceplay-build;0.1-SNAPSHOT [compile]
+[debug] == resolving dependencies default#towerdefenceplay-build;0.1-SNAPSHOT->com.typesafe.sbt#sbt-echo-play;0.1.1.3 [compile->default(compile)]
 [debug] == resolving dependencies com.typesafe.sbt#sbt-echo-play;0.1.1.3->com.typesafe.sbt#sbt-echo;0.1.1.3 [compile->default(compile)]
 [debug] == resolving dependencies com.typesafe.sbt#sbt-echo;0.1.1.3->org.aspectj#aspectjtools;1.7.3 [compile->default(compile)]
 [debug] == resolving dependencies com.typesafe.sbt#sbt-echo;0.1.1.3->org.aspectj#aspectjtools;1.7.3 [compile->runtime]
@@ -2385,13 +2385,13 @@
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.2 {provided=[default(compile)]} => dependency: org.scala-lang#scala-library;2.10.3 {provided=[default(compile)]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.2 {provided=[default(compile)]} => dependency: org.scala-lang#scala-library;2.10.3 {provided=[default(compile)]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.10.3 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.10.3 {scala-tool=[default, optional(default)]}
-[debug] dependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@432da7 => sbt.ivyint.MergedDescriptors@1b2b0fc
+[debug] dependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@27db50e8 => sbt.ivyint.MergedDescriptors@7ce3ff3e
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.10.3 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.10.3 {scala-tool=[default, optional(default)]}
-[debug] dependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@432da7 => sbt.ivyint.MergedDescriptors@1be364a
+[debug] dependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@27db50e8 => sbt.ivyint.MergedDescriptors@57552af5
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.10.3 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.10.3 {scala-tool=[default, optional(default)]}
-[debug] dependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@432da7 => sbt.ivyint.MergedDescriptors@f17b5a
+[debug] dependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@27db50e8 => sbt.ivyint.MergedDescriptors@30ae8711
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.10.3 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.10.3 {scala-tool=[default, optional(default)]}
-[debug] dependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@432da7 => sbt.ivyint.MergedDescriptors@538805
+[debug] dependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@27db50e8 => sbt.ivyint.MergedDescriptors@5b1c3262
 [debug] == resolving dependencies com.typesafe.sbt#sbt-native-packager;0.6.4->org.apache.commons#commons-compress;1.4.1 [compile->runtime]
 [debug] == resolving dependencies com.typesafe.sbt#sbt-native-packager;0.6.4->org.apache.commons#commons-compress;1.4.1 [compile->compile]
 [debug] == resolving dependencies org.apache.commons#commons-compress;1.4.1->org.tukaani#xz;1.0 [compile->master(*)]
@@ -2400,13 +2400,13 @@
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.2 {provided=[default(compile)]} => dependency: org.scala-lang#scala-library;2.10.3 {provided=[default(compile)]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.2 {provided=[default(compile)]} => dependency: org.scala-lang#scala-library;2.10.3 {provided=[default(compile)]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.10.3 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.10.3 {scala-tool=[default, optional(default)]}
-[debug] dependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@432da7 => sbt.ivyint.MergedDescriptors@5482c6
+[debug] dependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@27db50e8 => sbt.ivyint.MergedDescriptors@4619ab4b
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.10.3 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.10.3 {scala-tool=[default, optional(default)]}
-[debug] dependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@432da7 => sbt.ivyint.MergedDescriptors@18e0dbd
+[debug] dependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@27db50e8 => sbt.ivyint.MergedDescriptors@24b2a96
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.10.3 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.10.3 {scala-tool=[default, optional(default)]}
-[debug] dependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@432da7 => sbt.ivyint.MergedDescriptors@143afa9
+[debug] dependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@27db50e8 => sbt.ivyint.MergedDescriptors@38fe879f
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.10.3 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.10.3 {scala-tool=[default, optional(default)]}
-[debug] dependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@432da7 => sbt.ivyint.MergedDescriptors@2f3bdf
+[debug] dependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@27db50e8 => sbt.ivyint.MergedDescriptors@29ebb80c
 [debug] == resolving dependencies org.apache.commons#commons-compress;1.4.1->org.tukaani#xz;1.0 [compile->compile(*)]
 [debug] == resolving dependencies org.apache.commons#commons-compress;1.4.1->org.tukaani#xz;1.0 [runtime->runtime(*)]
 [debug] == resolving dependencies org.apache.commons#commons-compress;1.4.1->org.tukaani#xz;1.0 [runtime->compile]
@@ -2481,21 +2481,21 @@
 [debug] == resolving dependencies com.typesafe.play#sbt-plugin;2.2.3->org.specs2#specs2_2.10;2.1.1 [compile->master]
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.10.2 {optional=[compile(*), master(*)]} => dependency: org.scala-lang#scala-compiler;2.10.3 {optional=[compile(*), master(*)]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.10.2 {optional=[compile(*), master(*)]} => dependency: org.scala-lang#scala-compiler;2.10.3 {optional=[compile(*), master(*)]}
-[debug] == resolving dependencies default#towerdefence-play-build;0.1-SNAPSHOT->com.typesafe.sbteclipse#sbteclipse-plugin;2.3.0 [compile->default(compile)]
-[debug] == resolving dependencies default#towerdefence-play-build;0.1-SNAPSHOT->com.typesafe.sbteclipse#sbteclipse-plugin;2.4.0 [compile->default(compile)]
-[debug] == resolving dependencies default#towerdefence-play-build;0.1-SNAPSHOT->com.github.mpeltonen#sbt-idea;1.5.2 [compile->default(compile)]
-[debug] == resolving dependencies default#towerdefence-play-build;0.1-SNAPSHOT->com.github.mpeltonen#sbt-idea;1.5.2 [compile->runtime]
-[debug] == resolving dependencies default#towerdefence-play-build;0.1-SNAPSHOT->com.github.mpeltonen#sbt-idea;1.5.2 [compile->compile]
-[debug] == resolving dependencies default#towerdefence-play-build;0.1-SNAPSHOT->com.github.mpeltonen#sbt-idea;1.5.2 [compile->master]
-[debug] == resolving dependencies default#towerdefence-play-build;0.1-SNAPSHOT->com.typesafe.play#sbt-plugin;2.2.2 [compile->default(compile)]
-[debug] == resolving dependencies default#towerdefence-play-build;0.1-SNAPSHOT->com.typesafe.play#sbt-plugin;2.2.3 [compile->default(compile)]
-[debug] == resolving dependencies for default#towerdefence-play-build;0.1-SNAPSHOT [optional]
-[debug] == resolving dependencies for default#towerdefence-play-build;0.1-SNAPSHOT [provided]
-[debug] == resolving dependencies default#towerdefence-play-build;0.1-SNAPSHOT->org.scala-lang#scala-library;2.10.3 [provided->default(compile)]
-[debug] == resolving dependencies default#towerdefence-play-build;0.1-SNAPSHOT->org.scala-lang#scala-library;2.10.3 [provided->runtime]
-[debug] == resolving dependencies default#towerdefence-play-build;0.1-SNAPSHOT->org.scala-lang#scala-library;2.10.3 [provided->compile]
-[debug] == resolving dependencies default#towerdefence-play-build;0.1-SNAPSHOT->org.scala-lang#scala-library;2.10.3 [provided->master]
-[debug] == resolving dependencies default#towerdefence-play-build;0.1-SNAPSHOT->org.scala-sbt#sbt;0.13.2 [provided->default(compile)]
+[debug] == resolving dependencies default#towerdefenceplay-build;0.1-SNAPSHOT->com.typesafe.sbteclipse#sbteclipse-plugin;2.3.0 [compile->default(compile)]
+[debug] == resolving dependencies default#towerdefenceplay-build;0.1-SNAPSHOT->com.typesafe.sbteclipse#sbteclipse-plugin;2.4.0 [compile->default(compile)]
+[debug] == resolving dependencies default#towerdefenceplay-build;0.1-SNAPSHOT->com.github.mpeltonen#sbt-idea;1.5.2 [compile->default(compile)]
+[debug] == resolving dependencies default#towerdefenceplay-build;0.1-SNAPSHOT->com.github.mpeltonen#sbt-idea;1.5.2 [compile->runtime]
+[debug] == resolving dependencies default#towerdefenceplay-build;0.1-SNAPSHOT->com.github.mpeltonen#sbt-idea;1.5.2 [compile->compile]
+[debug] == resolving dependencies default#towerdefenceplay-build;0.1-SNAPSHOT->com.github.mpeltonen#sbt-idea;1.5.2 [compile->master]
+[debug] == resolving dependencies default#towerdefenceplay-build;0.1-SNAPSHOT->com.typesafe.play#sbt-plugin;2.2.2 [compile->default(compile)]
+[debug] == resolving dependencies default#towerdefenceplay-build;0.1-SNAPSHOT->com.typesafe.play#sbt-plugin;2.2.3 [compile->default(compile)]
+[debug] == resolving dependencies for default#towerdefenceplay-build;0.1-SNAPSHOT [optional]
+[debug] == resolving dependencies for default#towerdefenceplay-build;0.1-SNAPSHOT [provided]
+[debug] == resolving dependencies default#towerdefenceplay-build;0.1-SNAPSHOT->org.scala-lang#scala-library;2.10.3 [provided->default(compile)]
+[debug] == resolving dependencies default#towerdefenceplay-build;0.1-SNAPSHOT->org.scala-lang#scala-library;2.10.3 [provided->runtime]
+[debug] == resolving dependencies default#towerdefenceplay-build;0.1-SNAPSHOT->org.scala-lang#scala-library;2.10.3 [provided->compile]
+[debug] == resolving dependencies default#towerdefenceplay-build;0.1-SNAPSHOT->org.scala-lang#scala-library;2.10.3 [provided->master]
+[debug] == resolving dependencies default#towerdefenceplay-build;0.1-SNAPSHOT->org.scala-sbt#sbt;0.13.2 [provided->default(compile)]
 [debug] == resolving dependencies org.scala-sbt#sbt;0.13.2->org.scala-lang#scala-library;2.10.3 [compile->default(compile)]
 [debug] == resolving dependencies org.scala-sbt#sbt;0.13.2->org.scala-lang#scala-library;2.10.3 [compile->runtime]
 [debug] == resolving dependencies org.scala-sbt#sbt;0.13.2->org.scala-lang#scala-library;2.10.3 [compile->compile]
@@ -2806,10 +2806,10 @@
 [debug] == resolving dependencies org.scala-sbt#precompiled-2_9_3;0.13.2->org.scala-lang#scala-library;2.10.3 [compile->master]
 [debug] == resolving dependencies org.scala-sbt#precompiled-2_9_3;0.13.2->org.scala-sbt#interface;0.13.2 [compile->default(compile)]
 [debug] resolving dependencies for configuration 'runtime-internal'
-[debug] == resolving dependencies for default#towerdefence-play-build;0.1-SNAPSHOT [runtime-internal]
-[debug] == resolving dependencies for default#towerdefence-play-build;0.1-SNAPSHOT [runtime]
-[debug] == resolving dependencies for default#towerdefence-play-build;0.1-SNAPSHOT [compile]
-[debug] == resolving dependencies default#towerdefence-play-build;0.1-SNAPSHOT->com.typesafe.sbt#sbt-echo-play;0.1.1.3 [compile->default(compile)]
+[debug] == resolving dependencies for default#towerdefenceplay-build;0.1-SNAPSHOT [runtime-internal]
+[debug] == resolving dependencies for default#towerdefenceplay-build;0.1-SNAPSHOT [runtime]
+[debug] == resolving dependencies for default#towerdefenceplay-build;0.1-SNAPSHOT [compile]
+[debug] == resolving dependencies default#towerdefenceplay-build;0.1-SNAPSHOT->com.typesafe.sbt#sbt-echo-play;0.1.1.3 [compile->default(compile)]
 [debug] == resolving dependencies com.typesafe.sbt#sbt-echo-play;0.1.1.3->com.typesafe.sbt#sbt-echo;0.1.1.3 [compile->default(compile)]
 [debug] == resolving dependencies com.typesafe.sbt#sbt-echo;0.1.1.3->org.aspectj#aspectjtools;1.7.3 [compile->default(compile)]
 [debug] == resolving dependencies com.typesafe.sbt#sbt-echo;0.1.1.3->org.aspectj#aspectjtools;1.7.3 [compile->runtime]
@@ -3146,13 +3146,13 @@
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.2 {provided=[default(compile)]} => dependency: org.scala-lang#scala-library;2.10.3 {provided=[default(compile)]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.2 {provided=[default(compile)]} => dependency: org.scala-lang#scala-library;2.10.3 {provided=[default(compile)]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.10.3 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.10.3 {scala-tool=[default, optional(default)]}
-[debug] dependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@432da7 => sbt.ivyint.MergedDescriptors@1a34c37
+[debug] dependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@27db50e8 => sbt.ivyint.MergedDescriptors@20b88b83
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.10.3 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.10.3 {scala-tool=[default, optional(default)]}
-[debug] dependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@432da7 => sbt.ivyint.MergedDescriptors@f43f1f
+[debug] dependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@27db50e8 => sbt.ivyint.MergedDescriptors@21d35323
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.10.3 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.10.3 {scala-tool=[default, optional(default)]}
-[debug] dependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@432da7 => sbt.ivyint.MergedDescriptors@9c181d
+[debug] dependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@27db50e8 => sbt.ivyint.MergedDescriptors@110512c3
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.10.3 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.10.3 {scala-tool=[default, optional(default)]}
-[debug] dependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@432da7 => sbt.ivyint.MergedDescriptors@1e5ecf7
+[debug] dependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@27db50e8 => sbt.ivyint.MergedDescriptors@1c119e81
 [debug] == resolving dependencies com.typesafe.sbt#sbt-native-packager;0.6.4->org.apache.commons#commons-compress;1.4.1 [compile->runtime]
 [debug] == resolving dependencies com.typesafe.sbt#sbt-native-packager;0.6.4->org.apache.commons#commons-compress;1.4.1 [compile->compile]
 [debug] == resolving dependencies org.apache.commons#commons-compress;1.4.1->org.tukaani#xz;1.0 [compile->master(*)]
@@ -3161,13 +3161,13 @@
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.2 {provided=[default(compile)]} => dependency: org.scala-lang#scala-library;2.10.3 {provided=[default(compile)]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.2 {provided=[default(compile)]} => dependency: org.scala-lang#scala-library;2.10.3 {provided=[default(compile)]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.10.3 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.10.3 {scala-tool=[default, optional(default)]}
-[debug] dependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@432da7 => sbt.ivyint.MergedDescriptors@1991792
+[debug] dependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@27db50e8 => sbt.ivyint.MergedDescriptors@43e0f479
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.10.3 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.10.3 {scala-tool=[default, optional(default)]}
-[debug] dependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@432da7 => sbt.ivyint.MergedDescriptors@1d5b74c
+[debug] dependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@27db50e8 => sbt.ivyint.MergedDescriptors@7aca75cc
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.10.3 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.10.3 {scala-tool=[default, optional(default)]}
-[debug] dependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@432da7 => sbt.ivyint.MergedDescriptors@1ab6fd5
+[debug] dependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@27db50e8 => sbt.ivyint.MergedDescriptors@6a3f0982
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.10.3 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.10.3 {scala-tool=[default, optional(default)]}
-[debug] dependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@432da7 => sbt.ivyint.MergedDescriptors@1fbe8a8
+[debug] dependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@27db50e8 => sbt.ivyint.MergedDescriptors@1d09a7b4
 [debug] == resolving dependencies org.apache.commons#commons-compress;1.4.1->org.tukaani#xz;1.0 [compile->compile(*)]
 [debug] == resolving dependencies org.apache.commons#commons-compress;1.4.1->org.tukaani#xz;1.0 [runtime->runtime(*)]
 [debug] == resolving dependencies org.apache.commons#commons-compress;1.4.1->org.tukaani#xz;1.0 [runtime->compile]
@@ -3242,21 +3242,21 @@
 [debug] == resolving dependencies com.typesafe.play#sbt-plugin;2.2.3->org.specs2#specs2_2.10;2.1.1 [compile->master]
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.10.2 {optional=[compile(*), master(*)]} => dependency: org.scala-lang#scala-compiler;2.10.3 {optional=[compile(*), master(*)]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.10.2 {optional=[compile(*), master(*)]} => dependency: org.scala-lang#scala-compiler;2.10.3 {optional=[compile(*), master(*)]}
-[debug] == resolving dependencies default#towerdefence-play-build;0.1-SNAPSHOT->com.typesafe.sbteclipse#sbteclipse-plugin;2.3.0 [compile->default(compile)]
-[debug] == resolving dependencies default#towerdefence-play-build;0.1-SNAPSHOT->com.typesafe.sbteclipse#sbteclipse-plugin;2.4.0 [compile->default(compile)]
-[debug] == resolving dependencies default#towerdefence-play-build;0.1-SNAPSHOT->com.github.mpeltonen#sbt-idea;1.5.2 [compile->default(compile)]
-[debug] == resolving dependencies default#towerdefence-play-build;0.1-SNAPSHOT->com.github.mpeltonen#sbt-idea;1.5.2 [compile->runtime]
-[debug] == resolving dependencies default#towerdefence-play-build;0.1-SNAPSHOT->com.github.mpeltonen#sbt-idea;1.5.2 [compile->compile]
-[debug] == resolving dependencies default#towerdefence-play-build;0.1-SNAPSHOT->com.github.mpeltonen#sbt-idea;1.5.2 [compile->master]
-[debug] == resolving dependencies default#towerdefence-play-build;0.1-SNAPSHOT->com.typesafe.play#sbt-plugin;2.2.2 [compile->default(compile)]
-[debug] == resolving dependencies default#towerdefence-play-build;0.1-SNAPSHOT->com.typesafe.play#sbt-plugin;2.2.3 [compile->default(compile)]
-[debug] == resolving dependencies for default#towerdefence-play-build;0.1-SNAPSHOT [optional]
+[debug] == resolving dependencies default#towerdefenceplay-build;0.1-SNAPSHOT->com.typesafe.sbteclipse#sbteclipse-plugin;2.3.0 [compile->default(compile)]
+[debug] == resolving dependencies default#towerdefenceplay-build;0.1-SNAPSHOT->com.typesafe.sbteclipse#sbteclipse-plugin;2.4.0 [compile->default(compile)]
+[debug] == resolving dependencies default#towerdefenceplay-build;0.1-SNAPSHOT->com.github.mpeltonen#sbt-idea;1.5.2 [compile->default(compile)]
+[debug] == resolving dependencies default#towerdefenceplay-build;0.1-SNAPSHOT->com.github.mpeltonen#sbt-idea;1.5.2 [compile->runtime]
+[debug] == resolving dependencies default#towerdefenceplay-build;0.1-SNAPSHOT->com.github.mpeltonen#sbt-idea;1.5.2 [compile->compile]
+[debug] == resolving dependencies default#towerdefenceplay-build;0.1-SNAPSHOT->com.github.mpeltonen#sbt-idea;1.5.2 [compile->master]
+[debug] == resolving dependencies default#towerdefenceplay-build;0.1-SNAPSHOT->com.typesafe.play#sbt-plugin;2.2.2 [compile->default(compile)]
+[debug] == resolving dependencies default#towerdefenceplay-build;0.1-SNAPSHOT->com.typesafe.play#sbt-plugin;2.2.3 [compile->default(compile)]
+[debug] == resolving dependencies for default#towerdefenceplay-build;0.1-SNAPSHOT [optional]
 [debug] resolving dependencies for configuration 'test-internal'
-[debug] == resolving dependencies for default#towerdefence-play-build;0.1-SNAPSHOT [test-internal]
-[debug] == resolving dependencies for default#towerdefence-play-build;0.1-SNAPSHOT [test]
-[debug] == resolving dependencies for default#towerdefence-play-build;0.1-SNAPSHOT [runtime]
-[debug] == resolving dependencies for default#towerdefence-play-build;0.1-SNAPSHOT [compile]
-[debug] == resolving dependencies default#towerdefence-play-build;0.1-SNAPSHOT->com.typesafe.sbt#sbt-echo-play;0.1.1.3 [compile->default(compile)]
+[debug] == resolving dependencies for default#towerdefenceplay-build;0.1-SNAPSHOT [test-internal]
+[debug] == resolving dependencies for default#towerdefenceplay-build;0.1-SNAPSHOT [test]
+[debug] == resolving dependencies for default#towerdefenceplay-build;0.1-SNAPSHOT [runtime]
+[debug] == resolving dependencies for default#towerdefenceplay-build;0.1-SNAPSHOT [compile]
+[debug] == resolving dependencies default#towerdefenceplay-build;0.1-SNAPSHOT->com.typesafe.sbt#sbt-echo-play;0.1.1.3 [compile->default(compile)]
 [debug] == resolving dependencies com.typesafe.sbt#sbt-echo-play;0.1.1.3->com.typesafe.sbt#sbt-echo;0.1.1.3 [compile->default(compile)]
 [debug] == resolving dependencies com.typesafe.sbt#sbt-echo;0.1.1.3->org.aspectj#aspectjtools;1.7.3 [compile->default(compile)]
 [debug] == resolving dependencies com.typesafe.sbt#sbt-echo;0.1.1.3->org.aspectj#aspectjtools;1.7.3 [compile->runtime]
@@ -3593,17 +3593,17 @@
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.2 {provided=[default(compile)]} => dependency: org.scala-lang#scala-library;2.10.3 {provided=[default(compile)]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.2 {provided=[default(compile)]} => dependency: org.scala-lang#scala-library;2.10.3 {provided=[default(compile)]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.10.3 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.10.3 {scala-tool=[default, optional(default)]}
-[debug] dependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@432da7 => sbt.ivyint.MergedDescriptors@1c43a9b
+[debug] dependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@27db50e8 => sbt.ivyint.MergedDescriptors@29fc47fa
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.10.3 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.10.3 {scala-tool=[default, optional(default)]}
-[debug] dependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@432da7 => sbt.ivyint.MergedDescriptors@1b65845
+[debug] dependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@27db50e8 => sbt.ivyint.MergedDescriptors@539d84c2
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.10.3 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.10.3 {scala-tool=[default, optional(default)]}
-[debug] dependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@432da7 => sbt.ivyint.MergedDescriptors@e2c07b
+[debug] dependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@27db50e8 => sbt.ivyint.MergedDescriptors@6d885b36
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.10.3 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.10.3 {scala-tool=[default, optional(default)]}
-[debug] dependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@432da7 => sbt.ivyint.MergedDescriptors@145585
+[debug] dependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@27db50e8 => sbt.ivyint.MergedDescriptors@16ae35c9
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.10.3 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.10.3 {scala-tool=[default, optional(default)]}
-[debug] dependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@432da7 => sbt.ivyint.MergedDescriptors@c6a53e
+[debug] dependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@27db50e8 => sbt.ivyint.MergedDescriptors@5d267371
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.10.3 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.10.3 {scala-tool=[default, optional(default)]}
-[debug] dependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@432da7 => sbt.ivyint.MergedDescriptors@1f7bb93
+[debug] dependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@27db50e8 => sbt.ivyint.MergedDescriptors@62a24783
 [debug] == resolving dependencies com.typesafe.sbt#sbt-native-packager;0.6.4->org.apache.commons#commons-compress;1.4.1 [compile->runtime]
 [debug] == resolving dependencies com.typesafe.sbt#sbt-native-packager;0.6.4->org.apache.commons#commons-compress;1.4.1 [compile->compile]
 [debug] == resolving dependencies org.apache.commons#commons-compress;1.4.1->org.tukaani#xz;1.0 [compile->master(*)]
@@ -3612,17 +3612,17 @@
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.2 {provided=[default(compile)]} => dependency: org.scala-lang#scala-library;2.10.3 {provided=[default(compile)]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.10.2 {provided=[default(compile)]} => dependency: org.scala-lang#scala-library;2.10.3 {provided=[default(compile)]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.10.3 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.10.3 {scala-tool=[default, optional(default)]}
-[debug] dependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@432da7 => sbt.ivyint.MergedDescriptors@12480d3
+[debug] dependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@27db50e8 => sbt.ivyint.MergedDescriptors@2a3b8505
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.10.3 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.10.3 {scala-tool=[default, optional(default)]}
-[debug] dependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@432da7 => sbt.ivyint.MergedDescriptors@2a39dc
+[debug] dependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@27db50e8 => sbt.ivyint.MergedDescriptors@4468c6c8
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.10.3 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.10.3 {scala-tool=[default, optional(default)]}
-[debug] dependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@432da7 => sbt.ivyint.MergedDescriptors@2d2e29
+[debug] dependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@27db50e8 => sbt.ivyint.MergedDescriptors@34061f99
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.10.3 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.10.3 {scala-tool=[default, optional(default)]}
-[debug] dependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@432da7 => sbt.ivyint.MergedDescriptors@16eba02
+[debug] dependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@27db50e8 => sbt.ivyint.MergedDescriptors@1ef87ca2
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.10.3 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.10.3 {scala-tool=[default, optional(default)]}
-[debug] dependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@432da7 => sbt.ivyint.MergedDescriptors@7387a4
+[debug] dependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@27db50e8 => sbt.ivyint.MergedDescriptors@681dc1d5
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.10.3 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.10.3 {scala-tool=[default, optional(default)]}
-[debug] dependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@432da7 => sbt.ivyint.MergedDescriptors@13cba2f
+[debug] dependency descriptor has been mediated: sbt.ivyint.MergedDescriptors@27db50e8 => sbt.ivyint.MergedDescriptors@6ac10498
 [debug] == resolving dependencies org.apache.commons#commons-compress;1.4.1->org.tukaani#xz;1.0 [compile->compile(*)]
 [debug] == resolving dependencies org.apache.commons#commons-compress;1.4.1->org.tukaani#xz;1.0 [runtime->runtime(*)]
 [debug] == resolving dependencies org.apache.commons#commons-compress;1.4.1->org.tukaani#xz;1.0 [runtime->compile]
@@ -3697,21 +3697,21 @@
 [debug] == resolving dependencies com.typesafe.play#sbt-plugin;2.2.3->org.specs2#specs2_2.10;2.1.1 [compile->master]
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.10.2 {optional=[compile(*), master(*)]} => dependency: org.scala-lang#scala-compiler;2.10.3 {optional=[compile(*), master(*)]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.10.2 {optional=[compile(*), master(*)]} => dependency: org.scala-lang#scala-compiler;2.10.3 {optional=[compile(*), master(*)]}
-[debug] == resolving dependencies default#towerdefence-play-build;0.1-SNAPSHOT->com.typesafe.sbteclipse#sbteclipse-plugin;2.3.0 [compile->default(compile)]
-[debug] == resolving dependencies default#towerdefence-play-build;0.1-SNAPSHOT->com.typesafe.sbteclipse#sbteclipse-plugin;2.4.0 [compile->default(compile)]
-[debug] == resolving dependencies default#towerdefence-play-build;0.1-SNAPSHOT->com.github.mpeltonen#sbt-idea;1.5.2 [compile->default(compile)]
-[debug] == resolving dependencies default#towerdefence-play-build;0.1-SNAPSHOT->com.github.mpeltonen#sbt-idea;1.5.2 [compile->runtime]
-[debug] == resolving dependencies default#towerdefence-play-build;0.1-SNAPSHOT->com.github.mpeltonen#sbt-idea;1.5.2 [compile->compile]
-[debug] == resolving dependencies default#towerdefence-play-build;0.1-SNAPSHOT->com.github.mpeltonen#sbt-idea;1.5.2 [compile->master]
-[debug] == resolving dependencies default#towerdefence-play-build;0.1-SNAPSHOT->com.typesafe.play#sbt-plugin;2.2.2 [compile->default(compile)]
-[debug] == resolving dependencies default#towerdefence-play-build;0.1-SNAPSHOT->com.typesafe.play#sbt-plugin;2.2.3 [compile->default(compile)]
-[debug] == resolving dependencies for default#towerdefence-play-build;0.1-SNAPSHOT [optional]
-[debug] == resolving dependencies for default#towerdefence-play-build;0.1-SNAPSHOT [provided]
-[debug] == resolving dependencies default#towerdefence-play-build;0.1-SNAPSHOT->org.scala-lang#scala-library;2.10.3 [provided->default(compile)]
-[debug] == resolving dependencies default#towerdefence-play-build;0.1-SNAPSHOT->org.scala-lang#scala-library;2.10.3 [provided->runtime]
-[debug] == resolving dependencies default#towerdefence-play-build;0.1-SNAPSHOT->org.scala-lang#scala-library;2.10.3 [provided->compile]
-[debug] == resolving dependencies default#towerdefence-play-build;0.1-SNAPSHOT->org.scala-lang#scala-library;2.10.3 [provided->master]
-[debug] == resolving dependencies default#towerdefence-play-build;0.1-SNAPSHOT->org.scala-sbt#sbt;0.13.2 [provided->default(compile)]
+[debug] == resolving dependencies default#towerdefenceplay-build;0.1-SNAPSHOT->com.typesafe.sbteclipse#sbteclipse-plugin;2.3.0 [compile->default(compile)]
+[debug] == resolving dependencies default#towerdefenceplay-build;0.1-SNAPSHOT->com.typesafe.sbteclipse#sbteclipse-plugin;2.4.0 [compile->default(compile)]
+[debug] == resolving dependencies default#towerdefenceplay-build;0.1-SNAPSHOT->com.github.mpeltonen#sbt-idea;1.5.2 [compile->default(compile)]
+[debug] == resolving dependencies default#towerdefenceplay-build;0.1-SNAPSHOT->com.github.mpeltonen#sbt-idea;1.5.2 [compile->runtime]
+[debug] == resolving dependencies default#towerdefenceplay-build;0.1-SNAPSHOT->com.github.mpeltonen#sbt-idea;1.5.2 [compile->compile]
+[debug] == resolving dependencies default#towerdefenceplay-build;0.1-SNAPSHOT->com.github.mpeltonen#sbt-idea;1.5.2 [compile->master]
+[debug] == resolving dependencies default#towerdefenceplay-build;0.1-SNAPSHOT->com.typesafe.play#sbt-plugin;2.2.2 [compile->default(compile)]
+[debug] == resolving dependencies default#towerdefenceplay-build;0.1-SNAPSHOT->com.typesafe.play#sbt-plugin;2.2.3 [compile->default(compile)]
+[debug] == resolving dependencies for default#towerdefenceplay-build;0.1-SNAPSHOT [optional]
+[debug] == resolving dependencies for default#towerdefenceplay-build;0.1-SNAPSHOT [provided]
+[debug] == resolving dependencies default#towerdefenceplay-build;0.1-SNAPSHOT->org.scala-lang#scala-library;2.10.3 [provided->default(compile)]
+[debug] == resolving dependencies default#towerdefenceplay-build;0.1-SNAPSHOT->org.scala-lang#scala-library;2.10.3 [provided->runtime]
+[debug] == resolving dependencies default#towerdefenceplay-build;0.1-SNAPSHOT->org.scala-lang#scala-library;2.10.3 [provided->compile]
+[debug] == resolving dependencies default#towerdefenceplay-build;0.1-SNAPSHOT->org.scala-lang#scala-library;2.10.3 [provided->master]
+[debug] == resolving dependencies default#towerdefenceplay-build;0.1-SNAPSHOT->org.scala-sbt#sbt;0.13.2 [provided->default(compile)]
 [debug] == resolving dependencies org.scala-sbt#sbt;0.13.2->org.scala-lang#scala-library;2.10.3 [compile->default(compile)]
 [debug] == resolving dependencies org.scala-sbt#sbt;0.13.2->org.scala-lang#scala-library;2.10.3 [compile->runtime]
 [debug] == resolving dependencies org.scala-sbt#sbt;0.13.2->org.scala-lang#scala-library;2.10.3 [compile->compile]
@@ -4013,18 +4013,18 @@
 [debug] == resolving dependencies org.scala-sbt#precompiled-2_9_3;0.13.2->org.scala-lang#scala-library;2.10.3 [compile->master]
 [debug] == resolving dependencies org.scala-sbt#precompiled-2_9_3;0.13.2->org.scala-sbt#interface;0.13.2 [compile->default(compile)]
 [debug] resolving dependencies for configuration 'plugin'
-[debug] == resolving dependencies for default#towerdefence-play-build;0.1-SNAPSHOT [plugin]
+[debug] == resolving dependencies for default#towerdefenceplay-build;0.1-SNAPSHOT [plugin]
 [debug] resolving dependencies for configuration 'sources'
-[debug] == resolving dependencies for default#towerdefence-play-build;0.1-SNAPSHOT [sources]
+[debug] == resolving dependencies for default#towerdefenceplay-build;0.1-SNAPSHOT [sources]
 [debug] resolving dependencies for configuration 'docs'
-[debug] == resolving dependencies for default#towerdefence-play-build;0.1-SNAPSHOT [docs]
+[debug] == resolving dependencies for default#towerdefenceplay-build;0.1-SNAPSHOT [docs]
 [debug] resolving dependencies for configuration 'pom'
-[debug] == resolving dependencies for default#towerdefence-play-build;0.1-SNAPSHOT [pom]
+[debug] == resolving dependencies for default#towerdefenceplay-build;0.1-SNAPSHOT [pom]
 [debug] resolving dependencies for configuration 'scala-tool'
-[debug] == resolving dependencies for default#towerdefence-play-build;0.1-SNAPSHOT [scala-tool]
-[debug] == resolving dependencies default#towerdefence-play-build;0.1-SNAPSHOT->org.scala-lang#scala-compiler;2.10.3 [scala-tool->default]
-[debug] == resolving dependencies default#towerdefence-play-build;0.1-SNAPSHOT->org.scala-lang#scala-compiler;2.10.3 [scala-tool->runtime]
-[debug] == resolving dependencies default#towerdefence-play-build;0.1-SNAPSHOT->org.scala-lang#scala-compiler;2.10.3 [scala-tool->compile]
+[debug] == resolving dependencies for default#towerdefenceplay-build;0.1-SNAPSHOT [scala-tool]
+[debug] == resolving dependencies default#towerdefenceplay-build;0.1-SNAPSHOT->org.scala-lang#scala-compiler;2.10.3 [scala-tool->default]
+[debug] == resolving dependencies default#towerdefenceplay-build;0.1-SNAPSHOT->org.scala-lang#scala-compiler;2.10.3 [scala-tool->runtime]
+[debug] == resolving dependencies default#towerdefenceplay-build;0.1-SNAPSHOT->org.scala-lang#scala-compiler;2.10.3 [scala-tool->compile]
 [debug] == resolving dependencies org.scala-lang#scala-compiler;2.10.3->org.scala-lang#scala-library;2.10.3 [compile->master(*)]
 [debug] == resolving dependencies org.scala-lang#scala-compiler;2.10.3->org.scala-lang#scala-library;2.10.3 [compile->compile(*)]
 [debug] == resolving dependencies org.scala-lang#scala-compiler;2.10.3->org.scala-lang#scala-library;2.10.3 [compile->default]
@@ -4042,8 +4042,8 @@
 [debug] == resolving dependencies org.scala-lang#scala-compiler;2.10.3->org.scala-lang#scala-reflect;2.10.3 [runtime->compile]
 [debug] == resolving dependencies org.scala-lang#scala-reflect;2.10.3->org.scala-lang#scala-library;2.10.3 [runtime->runtime(*)]
 [debug] == resolving dependencies org.scala-lang#scala-reflect;2.10.3->org.scala-lang#scala-library;2.10.3 [runtime->compile]
-[debug] == resolving dependencies default#towerdefence-play-build;0.1-SNAPSHOT->org.scala-lang#scala-compiler;2.10.3 [scala-tool->master]
-[debug] == resolving dependencies default#towerdefence-play-build;0.1-SNAPSHOT->org.scala-lang#scala-compiler;2.10.3 [scala-tool->optional(default)]
+[debug] == resolving dependencies default#towerdefenceplay-build;0.1-SNAPSHOT->org.scala-lang#scala-compiler;2.10.3 [scala-tool->master]
+[debug] == resolving dependencies default#towerdefenceplay-build;0.1-SNAPSHOT->org.scala-lang#scala-compiler;2.10.3 [scala-tool->optional(default)]
 [debug] == resolving dependencies org.scala-lang#scala-compiler;2.10.3->org.scala-lang#jline;2.10.3 [optional->master(*)]
 [info] Resolving org.scala-lang#jline;2.10.3 ...
 [debug] sbt-chain: Checking cache for: dependency: org.scala-lang#jline;2.10.3 {optional=[compile(*), master(*)]}
@@ -4058,11 +4058,11 @@
 [debug] 	typesafe-ivy-releases: revision in cache: org.fusesource.jansi#jansi;1.4
 [debug] 	found org.fusesource.jansi#jansi;1.4 in sbt-chain
 [debug] == resolving dependencies org.scala-lang#jline;2.10.3->org.fusesource.jansi#jansi;1.4 [compile->compile(*)]
-[debug] == resolving dependencies default#towerdefence-play-build;0.1-SNAPSHOT->org.scala-lang#scala-library;2.10.3 [scala-tool->default]
-[debug] == resolving dependencies default#towerdefence-play-build;0.1-SNAPSHOT->org.scala-lang#scala-library;2.10.3 [scala-tool->runtime]
-[debug] == resolving dependencies default#towerdefence-play-build;0.1-SNAPSHOT->org.scala-lang#scala-library;2.10.3 [scala-tool->compile]
-[debug] == resolving dependencies default#towerdefence-play-build;0.1-SNAPSHOT->org.scala-lang#scala-library;2.10.3 [scala-tool->master]
-[debug] == resolving dependencies default#towerdefence-play-build;0.1-SNAPSHOT->org.scala-lang#scala-library;2.10.3 [scala-tool->optional(default)]
+[debug] == resolving dependencies default#towerdefenceplay-build;0.1-SNAPSHOT->org.scala-lang#scala-library;2.10.3 [scala-tool->default]
+[debug] == resolving dependencies default#towerdefenceplay-build;0.1-SNAPSHOT->org.scala-lang#scala-library;2.10.3 [scala-tool->runtime]
+[debug] == resolving dependencies default#towerdefenceplay-build;0.1-SNAPSHOT->org.scala-lang#scala-library;2.10.3 [scala-tool->compile]
+[debug] == resolving dependencies default#towerdefenceplay-build;0.1-SNAPSHOT->org.scala-lang#scala-library;2.10.3 [scala-tool->master]
+[debug] == resolving dependencies default#towerdefenceplay-build;0.1-SNAPSHOT->org.scala-lang#scala-library;2.10.3 [scala-tool->optional(default)]
 [debug] 	resolved ivy file produced in cache
 [debug] :: downloading artifacts ::
 [debug] 	[NOT REQUIRED] com.typesafe.sbt#sbt-echo-play;0.1.1.3!sbt-echo-play.jar
@@ -4147,19 +4147,19 @@
 [debug] 	[NOT REQUIRED] org.scala-sbt#apply-macro;0.13.2!apply-macro.jar
 [debug] 	[NOT REQUIRED] org.scala-lang#jline;2.10.3!jline.jar
 [debug] 	[NOT REQUIRED] org.fusesource.jansi#jansi;1.4!jansi.jar
-[debug] :: resolution report :: resolve 1358ms :: artifacts dl 70ms
-[debug] 	report for default#towerdefence-play-build;0.1-SNAPSHOT compile produced in E:\Martin\Studium\Play\projects\TowerDefence-play\project\target\resolution-cache\reports\default-towerdefence-play-build-compile.xml
-[debug] 	report for default#towerdefence-play-build;0.1-SNAPSHOT runtime produced in E:\Martin\Studium\Play\projects\TowerDefence-play\project\target\resolution-cache\reports\default-towerdefence-play-build-runtime.xml
-[debug] 	report for default#towerdefence-play-build;0.1-SNAPSHOT test produced in E:\Martin\Studium\Play\projects\TowerDefence-play\project\target\resolution-cache\reports\default-towerdefence-play-build-test.xml
-[debug] 	report for default#towerdefence-play-build;0.1-SNAPSHOT provided produced in E:\Martin\Studium\Play\projects\TowerDefence-play\project\target\resolution-cache\reports\default-towerdefence-play-build-provided.xml
-[debug] 	report for default#towerdefence-play-build;0.1-SNAPSHOT optional produced in E:\Martin\Studium\Play\projects\TowerDefence-play\project\target\resolution-cache\reports\default-towerdefence-play-build-optional.xml
-[debug] 	report for default#towerdefence-play-build;0.1-SNAPSHOT compile-internal produced in E:\Martin\Studium\Play\projects\TowerDefence-play\project\target\resolution-cache\reports\default-towerdefence-play-build-compile-internal.xml
-[debug] 	report for default#towerdefence-play-build;0.1-SNAPSHOT runtime-internal produced in E:\Martin\Studium\Play\projects\TowerDefence-play\project\target\resolution-cache\reports\default-towerdefence-play-build-runtime-internal.xml
-[debug] 	report for default#towerdefence-play-build;0.1-SNAPSHOT test-internal produced in E:\Martin\Studium\Play\projects\TowerDefence-play\project\target\resolution-cache\reports\default-towerdefence-play-build-test-internal.xml
-[debug] 	report for default#towerdefence-play-build;0.1-SNAPSHOT plugin produced in E:\Martin\Studium\Play\projects\TowerDefence-play\project\target\resolution-cache\reports\default-towerdefence-play-build-plugin.xml
-[debug] 	report for default#towerdefence-play-build;0.1-SNAPSHOT sources produced in E:\Martin\Studium\Play\projects\TowerDefence-play\project\target\resolution-cache\reports\default-towerdefence-play-build-sources.xml
-[debug] 	report for default#towerdefence-play-build;0.1-SNAPSHOT docs produced in E:\Martin\Studium\Play\projects\TowerDefence-play\project\target\resolution-cache\reports\default-towerdefence-play-build-docs.xml
-[debug] 	report for default#towerdefence-play-build;0.1-SNAPSHOT pom produced in E:\Martin\Studium\Play\projects\TowerDefence-play\project\target\resolution-cache\reports\default-towerdefence-play-build-pom.xml
-[debug] 	report for default#towerdefence-play-build;0.1-SNAPSHOT scala-tool produced in E:\Martin\Studium\Play\projects\TowerDefence-play\project\target\resolution-cache\reports\default-towerdefence-play-build-scala-tool.xml
-[debug] 	resolve done (1358ms resolve - 70ms download)
+[debug] :: resolution report :: resolve 3353ms :: artifacts dl 150ms
+[debug] 	report for default#towerdefenceplay-build;0.1-SNAPSHOT compile produced in C:\Users\Chris\Play\TowerDefencePlay\project\target\resolution-cache\reports\default-towerdefenceplay-build-compile.xml
+[debug] 	report for default#towerdefenceplay-build;0.1-SNAPSHOT runtime produced in C:\Users\Chris\Play\TowerDefencePlay\project\target\resolution-cache\reports\default-towerdefenceplay-build-runtime.xml
+[debug] 	report for default#towerdefenceplay-build;0.1-SNAPSHOT test produced in C:\Users\Chris\Play\TowerDefencePlay\project\target\resolution-cache\reports\default-towerdefenceplay-build-test.xml
+[debug] 	report for default#towerdefenceplay-build;0.1-SNAPSHOT provided produced in C:\Users\Chris\Play\TowerDefencePlay\project\target\resolution-cache\reports\default-towerdefenceplay-build-provided.xml
+[debug] 	report for default#towerdefenceplay-build;0.1-SNAPSHOT optional produced in C:\Users\Chris\Play\TowerDefencePlay\project\target\resolution-cache\reports\default-towerdefenceplay-build-optional.xml
+[debug] 	report for default#towerdefenceplay-build;0.1-SNAPSHOT compile-internal produced in C:\Users\Chris\Play\TowerDefencePlay\project\target\resolution-cache\reports\default-towerdefenceplay-build-compile-internal.xml
+[debug] 	report for default#towerdefenceplay-build;0.1-SNAPSHOT runtime-internal produced in C:\Users\Chris\Play\TowerDefencePlay\project\target\resolution-cache\reports\default-towerdefenceplay-build-runtime-internal.xml
+[debug] 	report for default#towerdefenceplay-build;0.1-SNAPSHOT test-internal produced in C:\Users\Chris\Play\TowerDefencePlay\project\target\resolution-cache\reports\default-towerdefenceplay-build-test-internal.xml
+[debug] 	report for default#towerdefenceplay-build;0.1-SNAPSHOT plugin produced in C:\Users\Chris\Play\TowerDefencePlay\project\target\resolution-cache\reports\default-towerdefenceplay-build-plugin.xml
+[debug] 	report for default#towerdefenceplay-build;0.1-SNAPSHOT sources produced in C:\Users\Chris\Play\TowerDefencePlay\project\target\resolution-cache\reports\default-towerdefenceplay-build-sources.xml
+[debug] 	report for default#towerdefenceplay-build;0.1-SNAPSHOT docs produced in C:\Users\Chris\Play\TowerDefencePlay\project\target\resolution-cache\reports\default-towerdefenceplay-build-docs.xml
+[debug] 	report for default#towerdefenceplay-build;0.1-SNAPSHOT pom produced in C:\Users\Chris\Play\TowerDefencePlay\project\target\resolution-cache\reports\default-towerdefenceplay-build-pom.xml
+[debug] 	report for default#towerdefenceplay-build;0.1-SNAPSHOT scala-tool produced in C:\Users\Chris\Play\TowerDefencePlay\project\target\resolution-cache\reports\default-towerdefenceplay-build-scala-tool.xml
+[debug] 	resolve done (3353ms resolve - 150ms download)
 [info] Done updating.
