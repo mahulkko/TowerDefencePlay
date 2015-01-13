@@ -1,8 +1,50 @@
- <div class="well"> 
- 
-    <h1>Json Test</h1>
+ <!-- CSS -->
+<style type="text/css">
+<!-- 
+    .well {
+        background-image: url("images/background3.jpg");
+        background-size: cover;
+        height: 100%;
+    }
     
-     <p>{{gameContext.player.name}}</p>
-     <p>{{gameContext.player.life}}</p>
+    #container {
+        background: white;
+        opacity: 0.9;
+        filter: alpha(opacity=90); /* For IE8 and earlier */
+        -webkit-box-shadow: 6px 6px 6px 0px rgba(0,0,0,1);
+        -moz-box-shadow: 6px 6px 6px 0px rgba(0,0,0,1);
+        box-shadow: 6px 6px 6px 0px rgba(0,0,0,1);
+        width: 800px;
+        position: relative;
+        margin-right: auto;
+        margin-left: auto;
+        padding: 10px;
+    }
     
+    h1 {
+        color: white;
+    }
+    
+    #container li {
+        margin: 5px;
+    }
+-->
+</style>
+ <menu>TowerDefence</menu>
+ <div class="well">
+      <center>
+        <h1>Spielregeln</h1>
+      </center>
+      <div id="container">
+        <ul>
+            <li>5 Sekunden Zeit um die ersten Tower zu Platzieren</li>
+            <li>Alle 2 Sekunden wird eine neue Einheit gesendet</li>
+            <li>Einheiten duerfen nicht zum Ende des Weges gelangen, andernfalls wird ein Leben abgezogen</li>
+            <li>Tower sind dazu gedacht, die Einheiten zu zerstoeren</li>
+            <li>Es muss immer ein Weg von Start zum Ende verfuegbar sein, Tower darf den Weg nicht blockieren</li>
+            <li>Tower kosten 100 Geld</li>
+            <li>Jede zerstoerte Einheit gibt 50 Geld</li>
+            <li>Hat der Spieler kein Leben mehr, ist das Spiel verloren</li>
+        </ul>
+      </div>  
 </div>

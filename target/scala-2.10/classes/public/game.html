@@ -8,6 +8,13 @@
    		background-size: cover;
    		height: 100%;
 	}
+	
+	#container {
+        width: 1200px;
+        position: relative;
+        margin-right: auto;
+        margin-left: auto;
+    }
 -->
 </style>
 
@@ -15,14 +22,16 @@
 <!-- HTML -->
 <menu>TowerDefence</menu>
 <div class="well">
-	<div class="row" >
-	     <playingfield class="col-md-6"></playingfield>
-         <controll class="col-md-6"></controll>
-         <div class="row" >
-              <fieldproperties class="col-md-3"></fieldproperties>
-              <player class="col-md-3"></player>  
-         </div>
-	</div>
+    <div id="container" class="col-md-12">
+        <div class="row">
+             <playingfield class="col-md-6"></playingfield>
+             <controll class="col-md-6" id="controll"></controll>           
+	         <div class="row">
+	              <fieldproperties class="col-md-3"></fieldproperties>
+	              <player class="col-md-3"></player>  
+	         </div>
+        </div>
+    </div>
 </div>
 
 
