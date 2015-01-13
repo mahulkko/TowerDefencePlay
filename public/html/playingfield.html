@@ -41,10 +41,10 @@
 <div id="playingfield">  
 	<table border="2px" border-color="black" class="borderless" id="pfieldtable" ng-table>
 		<tr border="2px" border-color="black" ng-repeat="rows in gameContext.playingField.fieldArray">
-			<td align="center" valign="middle" border="2px" border-color="black" class="field" width="60px" height="60px" ng-repeat="colum in rows" id="field{{$index}},{{$parent.$index}}" 
-				ng-click='clickOnField($index, $parent.$index, colum)' 
-				
-				ng-switch on='getFieldContent($index, $parent.$index, colum)'>
+			<td align="center" valign="middle" border="2px" border-color="black" class="field" width="60px" height="60px"
+			 ng-repeat="colum in rows" id="field{{$index}},{{$parent.$index}}" 
+			 ng-click='clickOnField($index, $parent.$index, colum)' 
+			 ng-switch on='getFieldContent($index, $parent.$index, colum)'>
 				
 				<div ng-switch-when="tower" id="tower" >
         			<img src="images/tower3.png" style="width:40px;height:60px">

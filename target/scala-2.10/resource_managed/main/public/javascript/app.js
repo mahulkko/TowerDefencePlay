@@ -26,9 +26,9 @@ towerdefenceApp.config( function($routeProvider) {
     	templateUrl: '/game.html',
         controller: 'GameContextCtrl'
       }).
-    when('/test', {
-        templateUrl: '/html/test.html',
-        controller: 'GameContextCtrl'
+    when('/rules', {
+        templateUrl: '/html/rules.html',
+        controller: 'RulesCtrl'
       }).
     otherwise({
       redirectTo: '/game'

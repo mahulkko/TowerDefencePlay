@@ -1,9 +1,8 @@
 # Routes
 # This file defines all application routes (Higher priority routes first)
-# ~~~~
 
-GET		/						controllers.WebController.index()
-GET		/test					controllers.Assets.at(path="/public/html", file="test.html")
+GET		/						                        controllers.WebController.index()
+GET		/rules					                        controllers.Assets.at(path="/public/html", file="rules.html")
 
 POST	/update											controllers.WebController.updateGameContext()
 POST 	/settower/:x/:y									controllers.WebController.setTower(x: Integer, y: Integer)
@@ -12,11 +11,11 @@ POST	/upgradetower/:x/:y								controllers.WebController.upgradeTower(x: Intege
 POST	/startnewgame/:name/:life/:money/:email/:x/:y	controllers.WebController.startNewGame(name: String, life: Integer, money: Integer, email: String, x: Integer, y: Integer)
 
 # Map static resources from the /public folder to the /assets URL path
-GET     /assets/*file            controllers.Assets.at(path="/public", file)
-GET     /webjars/*file           controllers.WebJarAssets.at(file)
+GET     /assets/*file                                   controllers.Assets.at(path="/public", file)
+GET     /webjars/*file                                  controllers.WebJarAssets.at(file)
 
 # Server Resources for html/css/js 
-GET     /*file     				controllers.Assets.at(path="/public", file)
-GET     /html/*file     		controllers.Assets.at(path="/public/html", file)
-GET     /js/*file     			controllers.Assets.at(path="/public/js", file)
-GET     /css/*file     			controllers.Assets.at(path="/public/css", file)
+GET     /*file     				                         controllers.Assets.at(path="/public", file)
+GET     /html/*file     		                         controllers.Assets.at(path="/public/html", file)
+GET     /js/*file     			                         controllers.Assets.at(path="/public/js", file)
+GET     /css/*file     			                         controllers.Assets.at(path="/public/css", file)

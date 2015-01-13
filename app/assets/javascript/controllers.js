@@ -275,3 +275,8 @@ towerdefenceApp.controller('LoginCtrl', function ($rootScope, $scope, $http, $ro
 		$rootScope.playingfieldsize = $scope.playingfieldsize;
 	}
 });
+
+/**
+ * Controller that handle the rules of the playing Game
+ */
+towerdefenceApp.controller('RulesCtrl', function ($rootScope, $scope, $http, $routeParams, $location) { });
